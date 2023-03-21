@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>멀티미디어</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <img src="https://placeimg.com/320/200/any" width = "400" alt="2023-06-30 종료"> <br>
+    <hr>
+    <!-- <img src="https://fastly.picsum.photos/id/347/200/300.jpg?hmac=1fVrW9rwreP4KjihlnGB5FbyHgQZ_B06amJlSg6bfes"> -->
+    <img src="https://piscum.photos/300/200" alt="이미지 대신 나오는 텍스트">
+    <hr>
+    <!-- <audio controls="controls">
+        <source src="test.mp3" type="audio/mp3">
+    </audio>-->
+    <audio src="test.mp3" controls="controls"></audio>
+    <hr>
+    <video src="testvideo.mp4" controls="controls"></video>
+    <hr>
+    <!--현재 위치에 존재하는 미디어 파일이 아니라, 현재 위치에 존재하는 폴더 내에 있는 미디어 파일을 호출할 때, 
+        경로(상대 경로)를 정확히 설정해주어야 한다.-->
+    <video src="./testvideo.mp4" controls="controls"></video>
+</body>
+</html>
