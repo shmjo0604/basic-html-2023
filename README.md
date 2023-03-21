@@ -5,7 +5,7 @@
 - 웹 기본 개념
     - HTTP 개요
     - 웹 동작 => "request & response"
-- 웹 개발 표준 기술(HTML,CSS,Javascript) 
+- 웹 개발 표준 기술(HTML, CSS, Javascript) 
     - HTML5 기본
         - HTML5 구조 => 요소(element), 태그(tag), 속성(attribute)
         - HTML5 기본 태그
