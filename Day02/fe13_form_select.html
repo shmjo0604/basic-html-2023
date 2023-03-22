@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title>Select 태그_ComboBox(Dropdown)</title>
+</head>
+<body>
+    <form method="get">
+        <select name="snack" multiple="multiple">
+            <!--option value 속성의 값을 지정해주면, submit 했을 때, 텍스트가 아니라 value 값이 전달된다.-->
+            <option value="">선택</option>
+            <option value="k">김밥</option>
+            <option value="d">떡볶이</option>
+            <option value="s">순대</option>
+            <option value="f">어묵</option>
+            <option value="o">우동</option>
+        </select>
+
+        <select name="media">
+            <optgroup label="HTML5">
+                <option value="mt">Multimedia tag</option>
+                <option value="co">Connectivity</option>
+                <option value="da">Device Access</option>
+            </optgroup>
+            <optgroup label="CSS3">
+                <option value="an">Animation</option>
+                <option value="3d">3D Transform</option>
+            </optgroup>
+        </select> <br>
+
+        <input type="email" name="email"> <br>
+        <!--@가 없는, 이메일 형식이 아닐 경우, 이메일 형식으로 작성하라는 메시지를 출력, 형식을 검증해준다.-->
+        <input type="submit" value="제출">
+    </form>    
+</body>
+</html>

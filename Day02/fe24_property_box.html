@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title>CSS Box 속성 학습</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+        div {
+            width: 100px; height: 100px;
+            background-color: rgba(0, 0, 255, 0.5);
+            border: 5px double;
+            border-color: cyan;
+            /* margin: 10px 0 0 30px; */
+            margin-top: 10px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 30px;
+            /* padding: 10px 50px 20px 30px; */
+            padding-top: 10px;
+            padding-right: 50px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+        }
+        p {
+            margin: 10px;
+        }
+        .box {
+            width: 500px;
+            background-color: antiquewhite;
+            border-width: 5px;
+            border-color:blue;
+            /* border-radius:30px 10px 40px 20px; */
+            border-radius: 30px 50px;
+            border-style: dashed;
+            display: none;
+        }
+    </style>
+</head>
+<body>  
+    <div>
+        <p>lorem</p>
+    </div>
+    <div class="box">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+    </div>
+</body>
+</html>

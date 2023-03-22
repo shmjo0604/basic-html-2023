@@ -22,3 +22,30 @@
 (2) media 태그 활용
 
 <img src="https://raw.githubusercontent.com/shmjo0604/basic-html-2023/main/image/day01_%EB%A9%80%ED%8B%B0%EB%AF%B8%EB%94%94%EC%96%B4.png" width="300">
+
+## 2일차 학습 내용
+- HTML5 학습
+    - HTML5 입력 양식 태그
+        - ★ form 태그 => action 속성(데이터 전달 주소(절대경로 or 상대경로)),
+                    => method 속성(get 또는 post), get은 전달 데이터가 화면에 표시, post는 데이터가 화면에 표시되지 않음
+        - ★ input 태그 => text, hidden, submit, button, checkbox, radio 등 속성 존재
+        - select 태그(ComboBox) => option 태그, outgroup 태그
+    - HTML5 공간 분할 태그
+        - ★ div, span 태그
+    - HTML5 시맨트 태그 => header, section, footer 등(div id 또는 class로 선언 가능)
+- CSS3 기본
+    - 기본 선택자 : all(*), tag, id, class
+    - 속성 선택자 : 태그[속성 = 값]
+    - 자손 & 후손 선택자 : 자손 vs ★ 후손
+    - 반응, 상태, 구조 선택자
+- CSS 속성
+    - Box 속성 -> margin, border, padding
+    - Display 속성 -> none
+- 학습 내용 기반 구현 화면
+
+(1) form 태그 method 속성에 따른 차이
+
+
+
+(2) 기본 선택자(id, class 선택자) 활용 -> Style 적용
+

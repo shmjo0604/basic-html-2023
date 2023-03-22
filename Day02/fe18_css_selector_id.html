@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>ID & Class 선택자 학습</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        #header {
+            /* 아이디 선택자는 '#아이디명' 형태 */
+            width: 1024px;
+            margin: 0 auto;
+            /* auto를 넣어주면, 정중앙으로 배치해준다.*/
+            background-color: aquamarine;
+            padding: 10px;
+        }
+        #wrap {
+            width: 1024px;
+            margin: 0 auto;
+            overflow: hidden;
+            
+        }
+        #aside {
+            width: 180px;
+            float: right;
+            background-color: blanchedalmond;
+            padding: 10px;
+            /* html 구조에 의해 content 영역이 먼저 나와야 하나, float right에 의해 aside가 오른쪽에 띄워진다. */
+            /* 즉, CSS3를 이용하는 것으로 위치를 변경할 수 있다. */
+        }
+        #content {
+            width: 804px;
+            float: left;
+            background-color: chartreuse;
+            padding: 10px;
+        }
+        .fruit {
+            /* Class 선택자는 같은 디자인을 적용하고 싶을 때, 같은 class로 설정 => 중복 가능 */
+            color: coral;
+        }
+        .item {
+            font-size: 50px;
+            font-style: unset;
+        }
+        .bound {
+            width: 800px;
+            /* border-width: 3px;
+            border-style: solid;
+            border-color: #808080; */
+            border: 3px dashed #808080;
+            border-radius: 10px;
+            /* 따로 따로 적용할 수도 있고, border-() 괄호 안의 내용을 한 줄에 다 적어도 가능*/
+        }
+    </style>
+</head>
+<body>
+    <!--아이디 선택자-->
+    <div id = "header">
+        <h1>#header 영역</h1>
+    </div>
+    <br>
+    <div id = "wrap" class="bound">
+        <div id = "aside">
+            <h2>#aside 영역</h2>
+        </div>
+        <div id = "content">
+            <h2>#content 영역</h2>
+        </div>
+    </div>
+    <br>
+    <!--클래스 선택자-->
+    <div class="bound">
+        <ul>
+            <li class="fruit">딸기</li>
+            <li class="fruit">바나나</li>
+            <li>오렌지</li>
+            <li>키위</li>
+        </ul>
+    </div>
+
+    <h1 class="item bound">동해물과 백두산이 마르고 닳도록</h1>
+
+</body>
+</html>

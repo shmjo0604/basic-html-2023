@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title>입력 양식 태그 학습</title>
+</head>
+<body>
+    <!--입력할 때는 반드시 form 태그 내에 입력 양식을 넣어줘야 한다!-->
+    <!--why? 입력값을 어떤 주소(url)로 전달해주어야 하는데, 그 역할을 하는 것이 form 태그이다.-->
+    <!--form 태그의 action 속성은 전달해줄 위치(주소)를 이야기하며,
+        method 속성은 전달 방식을 이야기한다.
+        전달 방식은 get 방식과 post 방식으로 나눌 수 있다.
+        get 방식은 url에 입력받은 데이터가 표시
+        post 방식은 url 주소를 변경하지 않고, 데이터 역시 표시되지 않음! -->
+    <form action="./fe11_inputs.html" method="post">
+        <input type="text" name="id">
+        <input type="password" name="password">
+        <input type="submit">
+        <input type="date" name="interior">
+        <input type="color">
+        <!--같은 input 태그이나, type 속성에 따라 입력 양식이 변한다.-->
+    </form>
+</body>
+</html>

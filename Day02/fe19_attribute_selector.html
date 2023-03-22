@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title>속성 선택자 학습</title>
+    <style>
+        input[type="text"] {
+            border-width: 2px;
+            border-color: chartreuse;
+        }
+        input[type="password"] {
+            border-width: 2px;
+            border-color: chartreuse;
+            background-color: beige;
+        }
+        input[type="submit"] {
+            font-weight: bolder;
+            font-size: 15px;
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <form method = "get">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+        </table>
+        <input type="submit" value="로그인">
+    </form>
+</body>
+</html>

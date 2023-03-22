@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title>form 태그 양식 학습</title>
+</head>
+<body>
+    <form action="./fe12_form_basic.html" method="get">
+        <!--사용자 입력 양식-->
+        <input type="text" name="text" value="text"> <br>
+        <input type="password" name="password" value="12345"> <br>
+        <input type="file" name="profile"> <br>
+        <input type="checkbox" name="fruit" value="사과">사과
+        <input type="checkbox" name="fruit" value="바나나">바나나
+        <input type="checkbox" name="fruit" value="오렌지">파인애플 <br>
+        <input type="radio" name="gender" value="남자">남자
+        <input type="radio" name="gender" value="여자">여자 <br>
+
+        <!--hidden 속성-->
+        <input type="hidden" name="code" valye="코드">
+
+        <!--button 속성-->
+        <input type="button" value="등록">
+        <input type="reset" value="초기화">
+        <!--최초 상태로 되돌려주는 기능-->
+        <input type="submit" value="승인"> <br>
+        <!--form 태그 내부에 존재할 때, form 태그 안에 입력된 데이터 값을 전달해주는 기능-->
+
+        <!--img vs imput type="image"-->
+        <!--img는 화면에 출력된 이미지를 클릭하여 어떤 반응이 없지만,
+            input type="image"는 이미지를 클릭하면 이미지의 x, y 값을 전달해준다.-->      
+        <input type="image" src="http:placehold.it/100x100">
+        <br>
+        <img src="http:placehold.it/200x100">
+
+    </form>
+</body>
+</html>
