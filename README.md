@@ -45,11 +45,11 @@
 
 (1) form 태그 method 속성에 따른 차이
 
-①
+① get 방식
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_get%20%EB%B0%A9%EC%8B%9D.png?raw=true" width="500">
 
-②
+② post 방식
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_post%20%EB%B0%A9%EC%8B%9D.png?raw=true" width="500">
 
