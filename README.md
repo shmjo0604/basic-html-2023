@@ -75,8 +75,8 @@
 
 ① normal layout
 
-<img src="" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_normal.png?raw=true" width="500">
 
 ② grid layout
 
-<img src="" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_grid.png?raw=true" width="500">
