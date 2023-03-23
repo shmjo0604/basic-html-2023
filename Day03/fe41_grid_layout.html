@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>그리드 레이아웃</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .item {
+            padding: 10px;
+            background-color:#eeeeee;
+        }
+        .item:nth-child(2n+1) {
+            background-color: #bbbbbb;
+        }
+        #wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 반응형 웹 -> 창 크기에 따라 알아서 웹 구성요소의 크기를 조절해주는 것*/
+            /* repeat(3, 1fr) */
+            /* grid-template-rows: 100px 100px; */ /* 거의 설정하지 않음 */
+            grid-template-rows: 1fr 2fr; /* fr 배율? */
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, expedita quidem! Quas fugit fuga iste magnam, tempora libero culpa nihil iure natus quos sequi suscipit voluptatum quisquam excepturi fugiat quo?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, expedita quidem! Quas fugit fuga iste magnam, tempora libero culpa nihil iure natus quos sequi suscipit voluptatum quisquam excepturi fugiat quo?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, expedita quidem! Quas fugit fuga iste magnam, tempora libero culpa nihil iure natus quos sequi suscipit voluptatum quisquam excepturi fugiat quo?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, expedita quidem! Quas fugit fuga iste magnam, tempora libero culpa nihil iure natus quos sequi suscipit voluptatum quisquam excepturi fugiat quo?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, expedita quidem! Quas fugit fuga iste magnam, tempora libero culpa nihil iure natus quos sequi suscipit voluptatum quisquam excepturi fugiat quo?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, expedita quidem! Quas fugit fuga iste magnam, tempora libero culpa nihil iure natus quos sequi suscipit voluptatum quisquam excepturi fugiat quo?</div>
+    </div>
+</body>
+</html>

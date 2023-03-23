@@ -38,7 +38,7 @@
     - 속성 선택자 : 태그[속성 = 값]
     - 자손 & 후손 선택자 : 자손 vs ★ 후손
     - 반응, 상태, 구조 선택자
-- CSS 속성
+- CSS3 속성
     - Box 속성 -> margin, border, padding
     - Display 속성 -> none
 - 학습 내용 기반 구현 화면
@@ -56,3 +56,27 @@
 (2) 기본 선택자(id, class 선택자) 활용 -> Style 적용
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_%EA%B8%B0%EB%B3%B8%20%EC%84%A0%ED%83%9D%EC%9E%90.png?raw=true" width="500">
+
+## 3일차 학습 내용
+- CSS3 속성
+    - Display 속성 -> none, block, inline 등
+    - Background 속성 -> image, size, repeat 등
+    - Font 속성 -> size, famil 등
+    - Position 속성 -> absolute, ★ relative, left, top, z-index
+    - Float 속성 -> right, left(★ 수평 정렬 기능)
+- CSS 레이아웃
+    - 수평 정렬 레이아웃
+    - 중앙 정렬 레이아웃
+    - flex box 레이아웃
+    - grid 레이아웃
+- 학습 내용 기반 구현 화면
+
+(1) normal layout vs grid layout
+
+① normal layout
+
+<img src="" width="500">
+
+② grid layout
+
+<img src="" width="500">

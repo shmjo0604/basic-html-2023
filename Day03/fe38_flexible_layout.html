@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>플렉스 박스 레이아웃</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+        .box {
+            background-color: lightgray;
+            margin: 5px; padding: 5px;
+            width: 100px;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 600px;
+            background-color: aliceblue;
+            border: 2px solid #303030;
+            margin-bottom: 10px;
+            display: flex;
+            /* flex box layout 설정 */
+        }
+        #opt1 {
+            flex-direction: row;
+        }
+        #opt2 {
+            flex-direction: row-reverse;
+        }
+        #opt3 {
+            flex-direction: column;
+        }
+        #opt4 {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div id="opt1" class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div id="opt2" class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div id="opt3" class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <div id="opt4" class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>

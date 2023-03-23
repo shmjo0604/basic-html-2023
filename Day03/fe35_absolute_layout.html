@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title>절대 위치 레이아웃</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 200px;
+            border: 2px solid black;
+            overflow: hidden;
+            position: relative;
+        }
+        .circle {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background-color: cornsilk;
+            position: absolute;
+        }
+        #red {
+            background-color: red;
+            left: 20px; top: 20px;
+        }
+        #green {
+            background-color: green;
+            right: 20px; top: 20px;
+            /* position relatvie -> red의 위치에 대해서 영향을 받고 있음 */
+        }
+        #blue {
+            background-color: blue;
+            right: 20px; bottom: 20px;
+        }
+        #yellow {
+            background-color: yellow;
+            left: 20px; bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>lorem ipsum</h2>
+    <div id="container">
+        <div id="red" class="circle"></div>
+        <div id="green" class="circle"></div>
+        <div id="blue" class="circle"></div>
+        <div id="yellow" class="circle"></div>
+    </div>
+    <h2>lorem ipsum</h2>
+</body>
+</html>
