@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>문서 객체 모델</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = function() {
+            var header = document.getElementById('header');
+            header.style.color = 'green';
+            header.style.backgroundColor = 'lightblue';
+            header.innerHTML = '자바스크립트에서 변경!';
+
+            // var h1 = document.querySelector('h1');
+            // h1.style.color = 'blue';
+            // h1.style.backgroundColor = 'lightgray';
+            // h1.innerHTML = 'Selector';
+
+            var headings = document.querySelectorAll('h1');
+            for (var i=1; i<headings.length; i++) {
+                var heading = headings[i];
+                heading.style.color = 'lightblue';
+                heading.style.backgroundColor = 'grey';
+                heading.innerHTML = 'All';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 id='header'>Lorem ipsum dolor sit amet</h1>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <h1>Lorem ipsum dolor sit amet</h1>
+</body>
+</html>

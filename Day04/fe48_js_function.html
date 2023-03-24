@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>익명 vs 일반</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /* 익명함수 우선순위 */
+        // var func = function() { alert('funcA'); };
+        // var func = function() { alert('funcB'); };
+
+        // func();
+
+        /* 익명함수 일반함수 우선순위 */
+        // var func=function() {alert('funcA');};
+        // function func( ) {alert('funcB');};
+
+        // func();
+
+        /* 매개변수 */
+        // function square(x) {
+        //     return x * x;
+        // }
+
+        // function plus1(x,y) {
+        //     return x + y;
+        // }
+
+        // alert(square(4));
+        // alert(plus1(2,100));
+
+        /* 함수를 매개변수로 */
+
+        // function protentimes(func) {
+        //     for (var i=0; i<3; i++) {
+        //         func();
+        //     }
+        // }
+
+        // var callback = function() {
+        //     alert('호출');
+        // }
+        
+        // protentimes(callback);
+        // protentimes(function() {console.log('콘솔에 나타난다.')});
+        
+        /* 객체 => json(javascript object notation */
+        var product = {
+            ingredient : '망고, 설탕',
+            name : '7D 망고',
+            type : '당절임',
+            origin : '필리핀'
+        }
+        console.log(product['name']);
+        console.log(product['origin']);
+        console.log(product.type);
+
+        for (var i in product) {
+            console.log(i + ':' + product[i]);
+        }
+
+        /* 숫자 문자 비교 시, == 은 값이 같으면 true 
+                            === 은 값과 타입이 모두 같아야 true*/
+        var a = 1;
+        var b = '1';
+
+        alert(a===b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

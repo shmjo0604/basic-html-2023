@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>문서 객체 모델</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = function() {
+            document.querySelector('h1').style.backgroundColor = 'red';
+            document.querySelector('p').style.color = 'blue';
+            document.querySelector('p').style.fontSize = '20px';
+            document.querySelector('h1').style.fontStyle  = 'Italic';
+        };
+    </script>
+</head>
+<body>
+    <h1>Lorem Ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda veniam recusandae dolore in vitae. Voluptates tenetur saepe maxime omnis, provident laboriosam, pariatur adipisci, id iste libero officia? Fugit, expedita assumenda.</p>
+
+    <script>
+        var h1style = document.querySelector('h1').style;
+            h1style.backgroundColor = 'blue';
+    </script>
+</body>
+</html>

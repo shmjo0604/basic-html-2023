@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!--edge에 맞추어서-->
+    <title>반응형 웹 페이지 (Viewport) </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #menu {
+            width: 300px;
+            float: left;
+        }
+        #menu li {
+            float: left;
+            margin: 10px;
+        }
+        #section {
+            width: 700px;
+            float: left;
+        }
+        li {
+            list-style: none;
+        }
+        /* 스마트폰 */
+        @media screen and (max-width:450px) and (orientation:portrait) {
+            /* screen과 print 차이는? */
+            body {
+                background-color: aliceblue;
+                width: auto;
+            }
+            /* #menu {
+                width: auto;
+                float: none;
+            }
+            #section {
+                width: auto;
+                float: none;
+            } */
+        }
+        /* 태블릿 */ 
+        @media screen and (min-width:450px) and (max-width:960px) and (orientation:portrait) {
+            body {
+                background-color: antiquewhite;
+                width: auto;
+            }
+            #menu {
+                width: auto;
+                float: left;
+            }
+            #section {
+                width: auto;
+                float: left;
+            }
+        }
+        /* 데스크탑 */ 
+        @media screen and (min-width:960px) and (orientation:portrait) {
+            body {
+                background-color: lightblue;
+                width: 960px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+           
+        }
+
+        @media screen and (orientation:landscape) {
+            body {
+                background-color: whitesmoke;
+            }
+        } 
+
+        @media print {
+            h1 {
+                color : blue;
+                font-size: 60px;
+            }
+            body {
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Product</li>
+            <li>Q&A</li>
+        </ul>
+    </div>
+    <div id="section">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit sint architecto quaerat asperiores iure dicta, porro possimus odio magni eaque, fuga cum rem est voluptates praesentium inventore, accusantium commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit sint architecto quaerat asperiores iure dicta, porro possimus odio magni eaque, fuga cum rem est voluptates praesentium inventore, accusantium commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit sint architecto quaerat asperiores iure dicta, porro possimus odio magni eaque, fuga cum rem est voluptates praesentium inventore, accusantium commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit sint architecto quaerat asperiores iure dicta, porro possimus odio magni eaque, fuga cum rem est voluptates praesentium inventore, accusantium commodi?</p>
+    </div>
+</body>
+</html>

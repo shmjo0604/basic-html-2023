@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>자바스크립트 학습</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 변수 선언 -> var
+        var radius = 10;
+        var pi = 3.14159265;
+        var greeting = 'Hello';
+
+        // 출력
+        alert(radius*radius*pi); // 원의 넓이
+
+        // 객체 생성
+        var date = new Date();
+        
+        // 요소 추출
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours();
+        // getDay는 금요일(5) -> 1~7까지 있음
+
+        // 출력
+        alert(year + '년' + month + '월' + day + '일' + hour + '시')
+
+
+    </script>
+</head>
+<body>
+    <h1>Hello Javascript!</h1>
+</body>
+</html>

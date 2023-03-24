@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // function func() {
+        //     alert('더블클릭');
+        // }
+        window.onload = function(event) {
+            alert(event.type); // -> load
+
+            var btn = document.getElementById('btn');
+            btn.onclick = function(e) {
+                alert(e.type); // -> click(type을 파악해서 다음 작업을 처리)
+            }
+            // 이벤트 매개변수 사용 -> event.type 종류 확인
+        };
+    </script>
+</head>
+<body>
+    <!-- <button ondblclick="func();">더블클릭</button>     -->
+    <button id="btn">클릭</button>
+</body>
+</html>

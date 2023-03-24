@@ -13,6 +13,7 @@
             - a 태그 => 절대 경로, 상대 경로 등
             - list 태그 => ul, ol, li
             - media 태그 => img, audio, video
+
 - 학습 내용 기반 구현 화면
 <!--![멀티미디어](https://github.com/shmjo0604/basic-html-2023/blob/main/image/day01.png?raw=true)-->
 (1) list, a 태그 활용
@@ -41,6 +42,7 @@
 - CSS3 속성
     - Box 속성 -> margin, border, padding
     - Display 속성 -> none
+
 - 학습 내용 기반 구현 화면
 
 (1) form 태그 method 속성에 따른 차이
@@ -69,6 +71,7 @@
     - 중앙 정렬 레이아웃
     - flex box 레이아웃
     - grid 레이아웃
+
 - 학습 내용 기반 구현 화면
 
 (1) CSS position(relative, absolute, left, top, z-index)
@@ -86,5 +89,31 @@
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_grid.png?raw=true" width="500">
 
 ## 4일차 학습 내용
+
+- CSS layout
+    - grid layout -> photo gallery(외부 스타일 적용)
+- 반응형 웹
+    - viewport -> 
+    - media query -> screen(or print), min(or max) width, orientation
+- Javascript
+    - 기본 문법
+    - 문서 객체 모델(Document Object Model)
+        - 문서 객체 -> 태그
+- jQuery
+    - 문서 객체 선택 & 조작 => $(선택자) 메소드(매개변수, 매개변수)
+    - 이벤트 연결 -> ready(), function 익명 함수
+    - 시각 효과 메소드 -> show, toggle, slide, animate 등
+- 학습 내용 기반 구현 화면
+
+(1) grid layout - photo gallery
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day04_grid_gallery.png" width="500">
+
+(2) 
+
+## 5일차 학습 내용
+- Javascript 학습
+- Bootstrap 학습
+- 프론트엔드 포트폴리오
 
 
