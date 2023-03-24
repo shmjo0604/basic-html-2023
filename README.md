@@ -71,7 +71,11 @@
     - grid 레이아웃
 - 학습 내용 기반 구현 화면
 
-(1) normal layout vs grid layout
+(1) CSS position(relative, absolute, left, top, z-index)
+
+<img src="" width="500">
+
+(2) normal layout vs grid layout
 
 ① normal layout
 
@@ -80,3 +84,7 @@
 ② grid layout
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_grid.png?raw=true" width="500">
+
+## 4일차 학습 내용
+
+
