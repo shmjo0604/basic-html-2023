@@ -73,7 +73,7 @@
 
 (1) CSS position(relative, absolute, left, top, z-index)
 
-<img src="" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_position.png?raw=true" width="500">
 
 (2) normal layout vs grid layout
 
