@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>js + jQuery 연동 학습</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 1. 기본 js 방법
+        window.onload = function() {
+
+            var jumin1 = document.getElementById('jumin1');
+            var jumin2 = document.getElementById('jumin2');
+
+            jumin1.onkeydown = function() {
+                // 익명 함수 양식은 js에서 거의 항상 사용
+                console.log(jumin1.value.length);
+                if (6 <= jumin1.value.length) {
+                    jumin2.focus();
+                };
+                // 키보드 입력 시 마다 이벤트가 발생 (onkeydown)
+                // 주민등록번호 앞자리 길이가 6자리 이상일 경우, 뒷자리 입력 칸으로 포커스 이동
+            };
+
+            jumin2.onkeydown = function(e) {
+                var event = e || window.event; 
+                // keyCode 8 backspace, 13 enter
+                if(event.keyCode == 8 && jumin2.value.length==0) { 
+                    // 뒷자리에서 backspace이고, 값을 다 지웠다면,
+                    // 앞자리 입력 칸으로 포커스 이동
+                    jumin1.focus();
+                };
+            };
+
+            jumin1.focus();
+        };
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" maxlength="6" id="jumin1">
+        <span>-</span>
+        <input type="password" maxlength="7" id="jumin2">
+        <!--maxlength는 입력 글자 수 제한(주민등록번호 등 필요한 경우에 사용)-->
+    </form>
+</body>
+</html>

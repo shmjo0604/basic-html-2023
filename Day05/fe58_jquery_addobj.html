@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jQuery 객체 추가</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" 
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" 
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function() {
+            
+            $('body').append('<h1>Create Object by jQuery</h1>');
+            // append를 사용해야 추가 가능
+
+            // 방법 1)
+            for(var i=0; i<10; i++) {
+                $('<h1>Create Object' + i + '</h1>').css({
+                    'background-color' : 'lightgrey',
+                    'color' : 'blue'
+                }).appendTo('body');
+
+                /* 방법 2)
+                var h1 = $('<h1>Create Object' + i + '</h1>').css({
+                    'background-color' : 'lightgrey',
+                    'color' : 'blue'
+                });
+                $('body').append(h1);
+                */
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

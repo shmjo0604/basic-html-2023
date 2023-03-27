@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>프레임 애니메이션</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.onload = function() {
+            var count = 0;
+            var running = document.getElementById('running');
+            var frames = ['./image/0.png', './image/1.png', './image/2.png', './image/3.png', './image/4.png', './image/5.png', 
+            './image/6.png', './image/7.png', './image/8.png', './image/9.png', './image/10.png', './image/11.png', './image/12.png', 
+            './image/13.png', './image/14.png'];
+
+            // <익명 람다 함수> -> 익명 함수와 동일
+            setInterval(() => {
+                running.src = frames[count % frames.length];
+                /*
+                0 % 15 = 0
+                1 % 15 = 1
+                ...
+                14 % 15 = 14
+                ---
+                15 % 15 = 0
+                16 % 15 = 1
+                17 % 15 = 2
+                ...
+                index 0~14를 무한반복 -> frames 배열에서 index 번호로 사진을 하나씩 꺼내서 화면에 출력하겠다.
+                */
+               count+=1;
+            }, 50);
+
+            // interval => 50 , 50ms에 한 번씩 이미지를 바꾸겠다 -> 바뀌는 속도를 조절하는 것
+
+            /* <익명 함수>
+            setInterval(function() {
+                
+            }, interval);
+            */
+        };
+    </script>
+</head>
+<body>
+    <img id="running">
+</body>
+</html>
