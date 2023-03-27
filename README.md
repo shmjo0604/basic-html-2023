@@ -117,8 +117,27 @@
     - 프레임 애니메이션
     - 문서 객체 추가
     - 무한 스크롤
-    - 플러그인
+    - 플러그인 -> lightBox, Masonry, bxSlider 등
 - Bootstrap 학습
+    - ★ container -> row & column
+    - grid -> (1개 row => ★ 12개 column 구조)
+    - form & component
+    - icon
+    - Bootstrap Alum example cloning(Theme 변경 버튼까지)
+- 학습 내용 기반 구현 화면
+
+(1)
+
+(2)
+
+(3)
+
+## 6일차 학습 내용
+- Bootstrap 학습
+    - Bootstrap Alum example cloning
+
+
+
 - 프론트엔드 포트폴리오
 
 
