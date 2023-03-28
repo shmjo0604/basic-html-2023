@@ -126,11 +126,17 @@
     - Bootstrap Alum example cloning(Theme 변경 버튼까지)
 - 학습 내용 기반 구현 화면
 
-(1)
+(1) Bootstrap grid layout
 
-(2)
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_grid.png" width="500">
 
-(3)
+(2) Bootstrap form
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_form.png" width="500">
+
+(3) Bootstrap component
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_comp.png" width="500">
 
 ## 6일차 학습 내용
 - Bootstrap 학습
