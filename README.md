@@ -14,7 +14,7 @@
             - list 태그 => ul, ol, li
             - media 태그 => img, audio, video
 
-- 학습 내용 기반 구현 화면
+- 학습 내용 구현 화면
 <!--![멀티미디어](https://github.com/shmjo0604/basic-html-2023/blob/main/image/day01.png?raw=true)-->
 (1) list, a 태그 활용
 
@@ -43,7 +43,7 @@
     - Box 속성 -> margin, border, padding
     - Display 속성 -> none
 
-- 학습 내용 기반 구현 화면
+- 학습 내용 구현 화면
 
 (1) form 태그 method 속성에 따른 차이
 
@@ -72,7 +72,7 @@
     - flex box 레이아웃
     - grid 레이아웃
 
-- 학습 내용 기반 구현 화면
+- 학습 내용 구현 화면
 
 (1) CSS position(relative, absolute, left, top, z-index)
 
@@ -103,7 +103,7 @@
     - 문서 객체 선택 & 조작 => $(선택자) 메소드(매개변수, 매개변수)
     - 이벤트 연결 -> ready(), function 익명 함수
     - 시각 효과 메소드 -> show, toggle, slide, animate 등
-- 학습 내용 기반 구현 화면
+- 학습 내용 구현 화면
 
 (1) grid layout - photo gallery
 
@@ -123,8 +123,8 @@
     - grid -> (1개 row => ★ 12개 column 구조)
     - form & component
     - icon
-    - Bootstrap Alum example cloning(Theme 변경 버튼까지)
-- 학습 내용 기반 구현 화면
+    - Bootstrap Album example cloning(Theme 변경 버튼까지)
+- 학습 내용 구현 화면
 
 (1) Bootstrap grid layout
 
@@ -140,9 +140,22 @@
 
 ## 6일차 학습 내용
 - Bootstrap 학습
-    - Bootstrap Alum example cloning
+    - Bootstrap Album example cloning
+- Pinterest Style Web cloning
 
+- 학습 내용 구현 화면
 
+(1) Bootstrap Album example cloning
+
+① light mode
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day06_bootstrap_example_light.png" width="800">
+
+② dark mode
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day06_bootstrap_example_dark.png" width="800">
+
+## 7일차 학습 내용
 
 - 프론트엔드 포트폴리오
 

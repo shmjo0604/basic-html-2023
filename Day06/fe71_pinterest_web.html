@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pinterest Style Web Cloning</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Bootstrap 용 CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!--Bootstrap 용 Icon CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--웹페이지 아이콘 변경-->
+    <link rel="icon" href="image/pinterest.ico">
+    <style>
+        /* 초기화 => margin 0, padding 0 (bootstrap) */
+        * {
+            font-family: 'NanumGothic', 'Malgun Gothic', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            /* underbar 삭제 */
+        }
+
+        img {
+            border: 0;
+        }
+
+        li {
+            list-style: none;
+            /* 목록 점 삭제 */
+        }
+
+        body {
+            background-color: snow;
+        }
+
+        /* header 영역*/
+        #main-header {
+            height: 40px;
+            background-color: #faf7f7;
+            position: relative;
+        }
+
+        .header-search-form {
+            float: left;
+            height: 26px;
+            padding: 7px;
+        }
+
+        .header-menu {
+            float: right;
+        }
+
+        .header-title {
+            position: absolute;
+            width: 200px;
+            height: 40px;
+            left: 50%;
+            margin-left: -100px;
+            background-image: url('image/logo.png');
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+            /* why? */
+        }
+
+        /* header input 영역 */
+        .form {
+
+            position: relative;
+        }
+
+        .form .fa-search {
+
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #9ca3af;
+
+        }
+
+        .form span {
+
+            position: absolute;
+            right: 17px;
+            top: 13px;
+            padding: 2px;
+            border-left: 1px solid #d1d5db;
+
+        }
+
+        .left-pan {
+            padding-left: 7px;
+        }
+
+        .left-pan i {
+
+            padding-left: 10px;
+        }
+
+        .form-input {
+            width: 250px;
+            height: 55px;
+            text-indent: 33px;
+            border-radius: 10px;
+        }
+
+        .form-input:focus {
+
+            box-shadow: none;
+            border: none;
+        }
+
+        /* header menu 영역*/
+        .outer-menu {
+            float: left;
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            padding: 10px 0;
+            position: relative;
+            text-align: center;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .outer-menu:hover {
+            background-color: #e1dfdf;
+        }
+
+        .inner-menu {
+            display: none;
+            background-color: white;
+            margin-top: 10px;
+            width: 100%;
+            border-top: 1px solid #cccaca;
+            box-shadow: 0 2px 2px rgba(34, 25, 25, 0.5);
+        }
+
+        .inner-menu a {
+            display: block;
+            padding: 5px 10px;
+            z-index: 5000;
+        }
+
+        .inner-menu a:hover {
+            background-color: #e1dfdf;
+        }
+
+        /* navigation 영역 */
+        #main-navigation {
+            height: 30px;
+            background-color: #faf7f7;
+            border-top: 1px solid #cfcaca;
+            box-shadow: 1px 3px 3px rgba(34, 25, 25, 0.5);
+        }
+
+        #main-navigation>ul {
+            overflow: hidden;
+            text-align: center;
+        }
+
+        #main-navigation>ul>li {
+            display: inline;
+            padding: 0px 10px;
+            line-height: 30px;
+            font-size: small;
+            color: #524d4d;
+            text-shadow: 0 1px 1px white;
+        }
+
+        #main-navigation>ul>li:hover {
+            background-color: #e1dfdf;
+            border-radius: 2px;
+        }
+
+        /* paper 영역(gallery 영역) */
+        .paper {
+            width: 210px;
+            margin: 10px 5px;
+            padding: 15px 15px 0;
+            font-size: smaller;
+            background-color: white;
+            box-shadow: 0 1px 2px rgba(34, 25, 25, 0.5);
+            border-radius: 10px;
+        }
+
+        .paper-description {
+            margin: 10px 0;
+        }
+
+        .paper-content {
+            margin: 0 -15px;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #f2f0f0;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .paper-text {
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .paper-link {
+            display: block;
+            float: left;
+        }
+
+        /* main-section 반응형 웹 미디어 쿼리 */
+        #main-section {
+            width: 920px;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width : 920px) {
+            #main-section {
+                width: 690px;
+                /* 한 줄에 세 개의 카드만 보여준다. */
+                /* bootstrap을 사용하면, 필요없으나, 대신 animation을 줄 수 없음 */
+            }
+        }
+
+        @media screen and (min-width : 920px) and (max-width : 1150px) {
+            #main-section {
+                width: 920px;
+            }
+
+            /* 한 줄에 네 개의 카드만 보여준다. */
+        }
+
+        @media screen and (min-width : 1150px) and (max-width : 1380px) {
+            #main-section {
+                width: 1150px;
+            }
+
+            /* 한 줄에 다섯 개의 카드만 보여준다. */
+        }
+
+        @media screen and (min-width : 1380px) {
+            #main-section {
+                width: 1380px;
+            }
+
+            /* 한 줄에 여섯 개의 카드만 보여준다. */
+        }
+
+        #darken-background {
+            display: none;
+        }
+
+        #lightBox {
+            width: 700px;
+            margin: 20px auto;
+            padding: 15px;
+
+            border: 1px solid #333333;
+            border-radius: 5px;
+        }
+    </style>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+        </script>
+    <!--Masonry-->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!--Masonry ImageLoading-->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // header pull-down menu event
+
+            $('.outer-menu').hover(function () {
+                $(this).find('.inner-menu').css('display', 'block');
+            }, function () {
+                $(this).find('.inner-menu').css('display', 'none');
+            });
+
+            // image load plugin
+            $('#main-section').imagesLoaded(function () {
+                $('#main-section').masonry({
+                    itemSelector: '.paper',
+                    columnWidth: 220,
+                    isAnimated: true,
+                });
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <!--header 영역-->
+    <header id="main-header">
+        <div class="header-search-form">
+            <form class="form">
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control form-input" placeholder="Search anything...">
+                <span class="left-pan"><i class="fa fa-microphone"></i></span>
+            </form>
+        </div>
+        <h1 class="header-title">Pinterest</h1>
+        <div class="header-menu">
+            <ul class="outer-menu">
+                <li>
+                    <a href="#">정보</a>
+                    <ul class="inner-menu">
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="outer-menu">
+                <li>
+                    <a href="#">프로필</a>
+                    <ul class="inner-menu">
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--navigation menu 영역-->
+    <nav id="main-navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!--gallery 영역-->
+    <section id="main-section">
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/700" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <!--paper 반복-->
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/710" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/440" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/800" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/420" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/600" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/750" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/770" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/500" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/450" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/400" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/850" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/900" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/720" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/420" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/445" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/910" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img src="https://picsum.photos/400/805" width="180">
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text">About me</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--lightBox 영역-->
+    <div id="darken-background">
+        <div class="lightBox">
+            <div class="user-info">
+                <a class="user-info-image" href="#">
+                    <img src="https://picsum.photos/70/70">
+                </a>
+                <div class="user-info-text">
+                    <h3>User</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div>
+            <hr class="lightBox-splitter">
+            <img src="https://picsum.photos/400/750">
+        </div>
+    </div>
+
+    <!--Bootstrap 용 js script 태그는 반드시 body 내부에 존재해야 한다!-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
