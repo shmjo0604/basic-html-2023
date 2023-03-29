@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pinterest Style Web Cloning</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Bootstrap 용 CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!--Bootstrap 용 Icon CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--웹페이지 아이콘 변경-->
+    <link rel="icon" href="image/pinterest.ico">
+    <!--CSS stylesheet-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+        </script>
+    <!--Masonry-->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!--ImageLoading-->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="script/main.js"></script>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <!--header 영역-->
+        <header id="main-header">
+            <div class="header-search-form">
+                <form class="form">
+                    <i class="fa fa-search"></i>
+                    <input type="text" class="form-control form-input" placeholder="Search">
+                    <span class="left-pan"><i class="fa fa-microphone"></i></span>
+                </form>
+            </div>
+            <h1 class="header-title">Pinterest</h1>
+        </header>
+        <!--navigation menu 영역-->
+        <nav id="main-navigation" class="shadow-sm">
+            <ul id="main-navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!--dropdown menu 영역 (by Bootstrap)-->
+            <div class="btn group profile-loc"> <!--profile loc은 위치-->
+                <button class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">프로필</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">About me</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Security</a></li>
+                    <li><hr class=dropdown-divider></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--gallery 영역-->
+    <section id="main-section">
+        <!--paper-->
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/700" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <!--paper 반복-->
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/715" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/750" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/720" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/570" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/600" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/800" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/770" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/500" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/450" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/400" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/850" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/900" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/710" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/420" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/445" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/790" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+        <div class="paper">
+            <div class="paper-holder">
+                <img class="paper-img" src="https://picsum.photos/400/810" width="210">
+            </div>
+            <!-- <p class="paper-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias,
+                reiciendis!</p> -->
+            <div class="paper-content align-middle">
+                <a class="paper-link" href="#">
+                    <!--user profile image-->
+                    <img src="image/profile.gif" width="30">
+                </a>
+                <p class="paper-text py-1">About me</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--lightBox 영역-->
+    <div id="darken-background">
+        <div id="lightBox">
+            <div class="user-info">
+                <a class="user-info-image" href="#">
+                    <img src="image/profile.gif">
+                </a>
+                <div class="user-info-text">
+                    <h3>About me...</h3>
+                </div>
+            </div>
+            <hr class="lightBox-splitter">
+            <img id="random-image" src="https://picsum.photos/600/500">
+        </div>
+    </div>
+
+    <!--Bootstrap 용 js script 태그는 반드시 body 내부에 존재해야 한다!-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

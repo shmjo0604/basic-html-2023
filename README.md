@@ -141,7 +141,7 @@
 ## 6일차 학습 내용
 - Bootstrap 학습
     - Bootstrap Album example cloning
-- Pinterest Style Web cloning
+- Pinterest Style Web cloning(to be continued)
 
 - 학습 내용 구현 화면
 
@@ -156,6 +156,25 @@
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day06_bootstrap_example_dark.png" width="800">
 
 ## 7일차 학습 내용
+- Pinterest Style Web cloning
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+    - Masonry layout library
+    - Imageloaded library
+    - lightBox
+- Parallax Scrolling Web cloning
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+- Single Page Template cloning
+
+- 학습 내용 구현 화면
+
+(1) Pinterest Style Web cloning
+
+① Masonry
+
+② lightBox
+
 
 - 프론트엔드 포트폴리오
 
