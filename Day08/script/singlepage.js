@@ -17,21 +17,25 @@ $(document).ready(function () {
         navbarShrink();
     });
 
-    $('.nav-link').click(function () {
-        $('.nav-link').removeClass('active');
-        $(this).addClass('active');
-    });
 
+    /* 메뉴 버튼 클릭에 따른 메뉴 active class 추가 및 제거 => 스크롤이 있으면 필요없음, 동시에 존재하면 충돌이 일어남! */ 
+
+    // $('.nav-link').click(function () {
+    //     $('.nav-link').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+
+    /* 스크롤 이동에 따른 메뉴 active class 추가 및 제거 */
+
+    // console.log($('.masthead').position().top);
+    // console.log($('#about').position().top);
+    // console.log($('#portfolio').position().top);
+    // console.log($("#signup").position().top);
+    
     masthead = $('.masthead').position().top;
     about = $('#about').position().top-250;
     portfolio = $('#portfolio').position().top - 75;
     signup = $("#signup").position().top - 100;
-
-    console.log($('.masthead').position().top);
-    console.log($('#about').position().top);
-    console.log($('#portfolio').position().top);
-    console.log($("#signup").position().top);
-    
 
     $(window).scroll(function() {
         var scroll = $(document).scrollTop();
@@ -54,25 +58,15 @@ $(document).ready(function () {
         }   
     });
 
-    // $(window).scroll(function() {
-    //     var scroll = $(document).scrollTop();
-    //     console.log(scroll);
-    //     if(scroll >= 200) {
-    //         $("#menu-about").addClass('active');
-    //     }
+    // const navbarToggler = $('.navbar-toggler');
+    // const responsiveNavItems = [].slice.call(
+    //     document.querySelectorAll('#navbarResponsive .nav-link')
+    // );
+    // responsiveNavItems.map(function (responsiveNavItem) {
+    //     responsiveNavItem.addEventListener('click', () => {
+    //         if (window.getComputedStyle(navbarToggler).display !== 'none') {
+    //             navbarToggler.click();
+    //         }
+    //     });
     // });
-
-
-
-    const navbarToggler = $('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
 });
