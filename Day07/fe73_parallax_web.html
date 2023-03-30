@@ -16,9 +16,29 @@
     <!--jQuery--> <!--외부스크립트 적용 시, jQuey script는 외부 script 태그 위에 존재해야 한다!-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
-    </script>
+        </script>
     <!--js 외부 script-->
     <script src="script/parallax.js"></script>
+    <script>
+        $(document).ready(function () {
+            var image = document.getElementById('hill1');
+
+            $('.content').css({
+                'position': 'absolute',
+                'top': image.height + 'px'
+            });
+        });
+
+        $(window).resize(function () {
+            var image = document.getElementById('hill1');
+            console.log(image.width + 'x' + image.height);
+
+            $('.content').css({
+                'position': 'absolute',
+                'top': image.height + 'px'
+            });
+        })
+    </script>
 </head>
 
 <body>
@@ -37,11 +57,11 @@
     <!--section-parallax 영역-->
     <section class="parallax">
         <!--이미지는 순서대로 출력해야 올바른 화면을 볼 수 있다.-->
-        <img id="hill1" src="image/hill1.png"> 
-        <img id="hill2" src="image/hill2.png"> 
-        <img id="hill3" src="image/hill3.png"> 
-        <img id="hill4" src="image/hill4.png"> 
-        <img id="hill5" src="image/hill5.png"> 
+        <img id="hill1" src="image/hill1.png">
+        <img id="hill2" src="image/hill2.png">
+        <img id="hill3" src="image/hill3.png">
+        <img id="hill4" src="image/hill4.png">
+        <img id="hill5" src="image/hill5.png">
         <img id="tree" src="image/tree.png">
         <h2 id="text">Parallax Website</h2>
         <img id="leaf" src="image/leaf.png">
@@ -52,13 +72,40 @@
     <section class="content">
         <h2>Parallax Scrolling Web</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, dolores aliquid possimus sit iste debitis cumque veritatis voluptatum quod omnis libero harum laudantium corporis maxime cupiditate iusto et quia a similique quibusdam. Beatae sit, deserunt consequatur inventore quaerat maiores illum? A minima rem assumenda magnam iure voluptatem at perspiciatis cupiditate mollitia vero, harum recusandae exercitationem facilis excepturi sit, maxime, quas libero? Voluptatum at, maxime reprehenderit beatae velit incidunt sequi repellendus quis explicabo corrupti omnis nobis vero voluptatibus odit provident qui voluptate ea quo. Reprehenderit, exercitationem. Fugit officiis hic dolorem quia numquam minus quisquam, necessitatibus possimus molestiae labore inventore et quam mollitia. Repellat illo, quae ab voluptate temporibus laboriosam. Maiores asperiores dolorem eaque, animi aliquam libero inventore voluptate dicta laborum ab rem architecto tempora quo quasi officiis, eum error! Soluta officiis totam eligendi perspiciatis vitae error perferendis consequatur magni dolorem. Itaque minus incidunt aliquid magni dolores beatae numquam architecto voluptatum necessitatibus quos nemo, ad autem commodi dolor explicabo reiciendis odit porro corrupti. Rem aperiam ullam cum aliquid magnam magni. Fugit, ut corporis. Veritatis hic tempora debitis saepe aperiam laboriosam id cumque odio mollitia ut omnis, facilis non possimus magnam? Ad quae rerum, doloribus consectetur facere magni harum mollitia placeat corrupti, quasi iure molestiae temporibus possimus explicabo! Cum temporibus saepe accusantium nihil, fuga quod repudiandae sequi incidunt minus velit illo ab harum accusamus numquam? Illum quos dolor sit quae nam officiis minus, nulla aspernatur quas optio? Nam harum odit consequuntur dolorem ipsum. Sapiente quia ex ipsam id enim recusandae architecto incidunt mollitia consequuntur dolorum rem nostrum, animi accusamus, itaque saepe necessitatibus neque aliquam provident blanditiis! Magnam, rem asperiores, minus doloremque animi enim iusto eaque perspiciatis tempore, corporis quia. Illum consequuntur quaerat veniam nulla. Nam hic qui fugit quia unde explicabo maxime culpa odit delectus ad aperiam, nulla totam accusantium saepe itaque ex.<br><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores modi neque iure numquam perferendis aspernatur minus nam aliquam tempora unde labore nisi, doloribus temporibus sunt vero odio libero eveniet et totam molestias eaque cumque quis. Dignissimos eum tenetur odit accusantium. Ducimus ipsa vel repellat quas rem perspiciatis quis non, blanditiis veniam, incidunt quidem esse ut alias? Blanditiis reiciendis id tempore deleniti ad maxime molestiae impedit perspiciatis eum, beatae assumenda porro veniam hic voluptatibus dolores a debitis totam! Veritatis aliquam, similique cupiditate amet alias aliquid molestias, in ad illum praesentium nam harum id fugit ratione autem inventore dolorem vitae nulla sunt!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, dolores aliquid possimus sit iste debitis
+            cumque veritatis voluptatum quod omnis libero harum laudantium corporis maxime cupiditate iusto et quia a
+            similique quibusdam. Beatae sit, deserunt consequatur inventore quaerat maiores illum? A minima rem
+            assumenda magnam iure voluptatem at perspiciatis cupiditate mollitia vero, harum recusandae exercitationem
+            facilis excepturi sit, maxime, quas libero? Voluptatum at, maxime reprehenderit beatae velit incidunt sequi
+            repellendus quis explicabo corrupti omnis nobis vero voluptatibus odit provident qui voluptate ea quo.
+            Reprehenderit, exercitationem. Fugit officiis hic dolorem quia numquam minus quisquam, necessitatibus
+            possimus molestiae labore inventore et quam mollitia. Repellat illo, quae ab voluptate temporibus
+            laboriosam. Maiores asperiores dolorem eaque, animi aliquam libero inventore voluptate dicta laborum ab rem
+            architecto tempora quo quasi officiis, eum error! Soluta officiis totam eligendi perspiciatis vitae error
+            perferendis consequatur magni dolorem. Itaque minus incidunt aliquid magni dolores beatae numquam architecto
+            voluptatum necessitatibus quos nemo, ad autem commodi dolor explicabo reiciendis odit porro corrupti. Rem
+            aperiam ullam cum aliquid magnam magni. Fugit, ut corporis. Veritatis hic tempora debitis saepe aperiam
+            laboriosam id cumque odio mollitia ut omnis, facilis non possimus magnam? Ad quae rerum, doloribus
+            consectetur facere magni harum mollitia placeat corrupti, quasi iure molestiae temporibus possimus
+            explicabo! Cum temporibus saepe accusantium nihil, fuga quod repudiandae sequi incidunt minus velit illo ab
+            harum accusamus numquam? Illum quos dolor sit quae nam officiis minus, nulla aspernatur quas optio? Nam
+            harum odit consequuntur dolorem ipsum. Sapiente quia ex ipsam id enim recusandae architecto incidunt
+            mollitia consequuntur dolorum rem nostrum, animi accusamus, itaque saepe necessitatibus neque aliquam
+            provident blanditiis! Magnam, rem asperiores, minus doloremque animi enim iusto eaque perspiciatis tempore,
+            corporis quia. Illum consequuntur quaerat veniam nulla. Nam hic qui fugit quia unde explicabo maxime culpa
+            odit delectus ad aperiam, nulla totam accusantium saepe itaque ex.<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores modi neque iure numquam perferendis
+            aspernatur minus nam aliquam tempora unde labore nisi, doloribus temporibus sunt vero odio libero eveniet et
+            totam molestias eaque cumque quis. Dignissimos eum tenetur odit accusantium. Ducimus ipsa vel repellat quas
+            rem perspiciatis quis non, blanditiis veniam, incidunt quidem esse ut alias? Blanditiis reiciendis id
+            tempore deleniti ad maxime molestiae impedit perspiciatis eum, beatae assumenda porro veniam hic
+            voluptatibus dolores a debitis totam! Veritatis aliquam, similique cupiditate amet alias aliquid molestias,
+            in ad illum praesentium nam harum id fugit ratione autem inventore dolorem vitae nulla sunt!
         </p>
     </section>
 
     <!--footer 영역-->
-    <footer>
+    <!-- <footer>
         <nav>
             <a href="#">Blog/a>
             <span> | </span>
@@ -70,11 +117,12 @@
             <span>email : shmjo0429@naver.com</span><br>
             <span>Copyright &copy; 2022. Codehal. All Right Reserved.</span>
         </p>
-    </footer>
+    </footer> -->
 
     <!--Bootstrap 용 js script 태그는 반드시 body 내부에 존재해야 한다!-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

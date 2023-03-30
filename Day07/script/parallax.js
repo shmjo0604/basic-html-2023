@@ -8,6 +8,16 @@ $(document).ready(function() {
     });
 });
 
+// $(window).resize(function() {
+//     var image = document.getElementById('hill1');
+//     console.log(image.width + 'x' + image.height);
+
+//     $('.contents').css({
+//         'position' : 'absolute',
+//         'top' : image.height + 'px'
+//     });
+// })
+
 $(window).scroll(function () {
     let value = window.scrollY;
     $('#text').css('margin-top', value * 2.0 + 'px');
