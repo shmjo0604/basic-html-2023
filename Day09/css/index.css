@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+#layout {
+    display: flex;
+}
+#layout #sidenav {
+    flex-basis: 225px;
+    flex-shrink: 0;
+    width: 225px;
+    height: 100vh;
+    z-index: 1040;
+    transform: translateX(-225px);
+}
+.sidebar-none #layout #content {
+    padding-left: 225px;
+    top: 56px;
+}
+
+#layout #content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: -255px;
+    min-width: 0;
+    min-height: calc(100vh - 56px);
+}
+/* Javscript => body에 sb-sidenav-toggled class 추가 */
+.sb-sidenav-toggled #layout #sidenav {
+    transform: translateX(0);
+}
+@media screen and (min-width: 992px) {
+    #layout #sidenav {
+        transform: translateX(0);
+      }
+    #layout #content {
+        margin-left: 0;
+        transition: margin 0.15s ease-in-out;
+      }
+    .sb-sidenav-toggled #layout #content {
+        margin-left: -225px;
+    }
+    .sb-sidenav-toggled #layout #sidenav {
+        transform: translateX(-225px);
+    }
+    .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+        transform: translateX(-225px);
+    }
+
+}
+#layout #sidenav, .top-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1040;
+}
+.sidebar-none .top-nav {
+    z-index: 1040;
+}
+.top-nav {
+    padding-left: 0;
+    height: 56px;
+    z-index: 1040;
+}
+.navbar-brand {
+    width: 225px;
+    margin: 0;
+}
+.navbar-expand {
+    justify-content: flex-start;
+}
+.navbar-expand .navbar-nav {
+    flex-direction: row;
+}
+.dropdown-menu {
+    position: absolute;
+}
+#sidebarToggle {
+    color: rgba(255, 255, 255, 0.5);
+}
+#sideNavAccordion {
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    background-color: #212529;
+    color: rgba(255, 255, 255, 0.7);
+}
+.sb-sidenav-menu {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.sb-sidenav-menu .nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.sb-sidenav-menu-heading {
+    padding: 1.75rem 1rem 0.75rem;
+    /* 3개 값 있으면 뭐가 적용되는 건데? */
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.7);
+}
+.sb-sidenav-menu .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+}
+.sb-sidenav-menu .nav-link:hover {
+    color: white;
+}
+.sb-sidenav-menu .nav-link.active {
+    color: chartreuse;
+}
+.sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+    color: chartreuse;
+}
+.sb-sidenav-menu .nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    /* position: relative; */
+}
+.sb-nav-link-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+/* Side Nav collapse 상태에 따른 Arrow 방향 설정 */
+.nav-link .sb-sidenav-collapse-arrow {
+    display: inline-block;
+    margin-left: auto;
+    transition: transform 0.15s ease;
+}
+.nav-link.collapsed .sb-sidenav-collapse-arrow {
+    transform: rotate(-90deg);
+}
+/* 사이드 메뉴 collapse가 있는 메뉴(Layout, Pages) */
+.sb-sidenav-menu-nested {
+    margin-left: 1.5rem;
+    flex-direction: column;
+}
+/* 사이드 메뉴 footer */
+.sb-sidenav-footer {
+    padding: 0.75rem;
+    background-color: #343a40;
+    flex-shrink: 0;
+}
+/* .sb-sidenav-toggled #layout #content {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1037;
+    transition: opacity 0.3s ease-in-out;
+  } */
+
+  /* .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+  } */

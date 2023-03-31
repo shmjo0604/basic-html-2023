@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
 
 
-    /* 메뉴 버튼 클릭에 따른 메뉴 active class 추가 및 제거 => 스크롤이 있으면 필요없음, 동시에 존재하면 충돌이 일어남! */ 
+    /* 메뉴 버튼 클릭에 따른 메뉴 active class 추가 및 제거 => 스크롤이 있으면 필요없음, 동시에 존재하면 충돌이 일어남! */
 
     // $('.nav-link').click(function () {
     //     $('.nav-link').removeClass('active');
@@ -31,31 +31,55 @@ $(document).ready(function () {
     // console.log($('#about').position().top);
     // console.log($('#portfolio').position().top);
     // console.log($("#signup").position().top);
-    
-    masthead = $('.masthead').position().top;
-    about = $('#about').position().top-250;
-    portfolio = $('#portfolio').position().top - 75;
-    signup = $("#signup").position().top - 100;
 
-    $(window).scroll(function() {
-        var scroll = $(document).scrollTop();
+    // masthead = $('.masthead').position().top;
+    // about = $('#about').position().top-250;
+    // portfolio = $('#portfolio').position().top - 75;
+    // signup = $("#signup").position().top - 100;
+
+
+
+   
+
+    // console.log(masthead);
+    // console.log(about);
+    // console.log(portfolio);
+    // console.log(signup);
+
+    $(window).scroll(function () {
+
+        var about = document.getElementById('about');
+        var aboutHeight = about.getBoundingClientRect().top;
+        console.log(aboutHeight);
+
+        masthead = $('.masthead').offset().top;
+        about = $('#about').offset().top;
+        portfolio = $('#portfolio').offset().top;
+        signup = $("#signup").offset().top;
+
+        console.log(masthead);
+        console.log(about);
+        console.log(portfolio);
+        console.log(signup);
+
+        var scroll = $(window).scrollTop();
         console.log(scroll);
-        if(scroll < about) {
+        if (scroll < about) {
             $('#menu-about').removeClass('active');
         }
-        else if(scroll >= about && scroll < portfolio) {
+        else if (scroll >= about && scroll < portfolio) {
             $('#menu-about').addClass('active');
             $('#menu-portfolio').removeClass('active');
         }
-        else if(scroll >= portfolio && scroll < signup) {
+        else if (scroll >= portfolio && scroll < signup) {
             $('#menu-portfolio').addClass('active');
             $('#menu-signup').removeClass('active');
             $('#menu-about').removeClass('active');
         }
-        else if(scroll >= signup) {
+        else if (scroll >= signup) {
             $('#menu-signup').addClass('active');
             $('#menu-portfolio').removeClass('active');
-        }   
+        }
     });
 
     // const navbarToggler = $('.navbar-toggler');

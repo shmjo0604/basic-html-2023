@@ -182,6 +182,11 @@
 
 (1) Single Page Template(GrayScale) cloning
 
+## 9일차 학습 내용
+- SB Admin Web Template Cloning
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+
 - 프론트엔드 포트폴리오
 
 
