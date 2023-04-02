@@ -37,10 +37,6 @@ $(document).ready(function () {
     // portfolio = $('#portfolio').position().top - 75;
     // signup = $("#signup").position().top - 100;
 
-
-
-   
-
     // console.log(masthead);
     // console.log(about);
     // console.log(portfolio);
@@ -48,19 +44,10 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
 
-        var about = document.getElementById('about');
-        var aboutHeight = about.getBoundingClientRect().top;
-        console.log(aboutHeight);
-
         masthead = $('.masthead').offset().top;
-        about = $('#about').offset().top;
-        portfolio = $('#portfolio').offset().top;
-        signup = $("#signup").offset().top;
-
-        console.log(masthead);
-        console.log(about);
-        console.log(portfolio);
-        console.log(signup);
+        about = $('#about').offset().top-250;
+        portfolio = $('#portfolio').offset().top-75;
+        signup = $("#signup").offset().top-100;
 
         var scroll = $(window).scrollTop();
         console.log(scroll);
