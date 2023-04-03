@@ -185,7 +185,7 @@
 
 (1) Single Page Template(GrayScale) cloning
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_singlepage_web.gif" width="800">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day08_singlepage_web.gif" width="800">
 
 ## 9일차 학습 내용
 - SB Admin Web Template Cloning(to be continued)
