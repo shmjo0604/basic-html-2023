@@ -128,15 +128,15 @@
 
 (1) Bootstrap grid layout
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_grid.png" width="600">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_grid.png" width="800">
 
 (2) Bootstrap form
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_form.png" width="600">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_form.png" width="800">
 
 (3) Bootstrap component
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_comp.png" width="600">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_comp.png" width="800">
 
 ## 6일차 학습 내용
 - Bootstrap 학습
