@@ -49,15 +49,15 @@
 
 ① get 방식
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_get%20%EB%B0%A9%EC%8B%9D.png?raw=true" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_get%20%EB%B0%A9%EC%8B%9D.png?raw=true" width="800">
 
 ② post 방식
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_post%20%EB%B0%A9%EC%8B%9D.png?raw=true" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_post%20%EB%B0%A9%EC%8B%9D.png?raw=true" width="800">
 
 (2) 기본 선택자(id, class 선택자) 활용 -> Style 적용
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_%EA%B8%B0%EB%B3%B8%20%EC%84%A0%ED%83%9D%EC%9E%90.png?raw=true" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day02_%EA%B8%B0%EB%B3%B8%20%EC%84%A0%ED%83%9D%EC%9E%90.png?raw=true" width="800">
 
 ## 3일차 학습 내용
 - CSS3 속성
@@ -76,17 +76,17 @@
 
 (1) CSS position(relative, absolute, left, top, z-index)
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_position.png?raw=true" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_position.png?raw=true" width="800">
 
 (2) normal layout vs grid layout
 
 ① normal layout
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_normal.png?raw=true" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_normal.png?raw=true" width="800">
 
 ② grid layout
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_grid.png?raw=true" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day03_grid.png?raw=true" width="800">
 
 ## 4일차 학습 내용
 
