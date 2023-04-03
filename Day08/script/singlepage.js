@@ -34,8 +34,8 @@ $(document).ready(function () {
 
     // masthead = $('.masthead').position().top;
     // about = $('#about').position().top-250;
-    // portfolio = $('#portfolio').position().top - 75;
-    // signup = $("#signup").position().top - 100;
+    // portfolio = $('#portfolio').position().top-75;
+    // signup = $("#signup").position().top-100;
 
     // console.log(masthead);
     // console.log(about);
@@ -57,6 +57,7 @@ $(document).ready(function () {
         else if (scroll >= about && scroll < portfolio) {
             $('#menu-about').addClass('active');
             $('#menu-portfolio').removeClass('active');
+            $('#menu-signup').removeClass('active');
         }
         else if (scroll >= portfolio && scroll < signup) {
             $('#menu-portfolio').addClass('active');
@@ -66,6 +67,7 @@ $(document).ready(function () {
         else if (scroll >= signup) {
             $('#menu-signup').addClass('active');
             $('#menu-portfolio').removeClass('active');
+            $('#menu-about').removeClass('active');
         }
     });
 

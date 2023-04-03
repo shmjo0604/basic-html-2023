@@ -43,7 +43,7 @@ $(window).scroll(function () {
         'top':value * 0.2 + 'px'
     })
     $('#plant').css({
-        'top':value * 0.3 + 'px',
-        'left':value * -0.9 + 'px'
+        // 'top':value * 0.1 + 'px',
+        // 'left':value * -0.2 + 'px'
     })
 });

@@ -171,22 +171,49 @@
 
 (1) Pinterest Style Web cloning
 
-① Masonry
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_pinterest_web.png" width="800">
 
-② lightBox
+(2) Parallax Scrolling Web cloning
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_parallax_web.png" width="800">
 
 ## 8일차 학습 내용
-- Single Page Template(GrayScale) cloning
+- Single Page Template(GrayScale) cloning 
+    - 메뉴 탭 반응형 추가, 스크롤 이벤트에 따른 메뉴 Active 추가
     - Bootstrap 5.3.0
     - jQuery 3.6.4
 
 (1) Single Page Template(GrayScale) cloning
 
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_singlepage_web.png" width="800">
+
 ## 9일차 학습 내용
-- SB Admin Web Template Cloning
+- SB Admin Web Template Cloning(to be continued)
+    - 현재 진행 상태
+        - 기본적인 레이아웃(+반응형) 및 디자인 완료(by Bootstrap & CSS)
+        - 사이드 메뉴 버튼 클릭에 따른 사이드 메뉴 활성 및 비활성 상태 전환 완료(by CSS & Javascript)
+        - Area Chart & Bar Chart 영역 구현(by Chart.js Libary)
+        - Data Table 영역 데이터 추가(only Data)
+    - 미해결 사항
+        - 사이드 메뉴 활성 상태 시, nav-brand 영역 글자가 사라지는 현상 수정
+        - 반응형 웹 구현(992px이하일 때, 메뉴 버튼 클릭 시, content 영역 어둡게 처리)
+        - Data Table 영역 구현
     - Bootstrap 5.3.0
     - jQuery 3.6.4
+    - Chart.js
 
-- 프론트엔드 포트폴리오
+(1) SB Admin Web Template Cloning
+
+## 10일차 학습 내용
+- SB Admin Web Template Cloning(to be continued)
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+    - Chart.js
+
+(1) SB Admin Web Template Cloning
+
+## 11일차 학습 내용
+
+## 12일차 학습 내용
 
 
