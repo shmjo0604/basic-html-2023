@@ -128,7 +128,7 @@
 
 (1) Bootstrap grid layout
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_grid.png" width="800">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day05_bootstrap_grid.png" width="800" height="200">
 
 (2) Bootstrap form
 
