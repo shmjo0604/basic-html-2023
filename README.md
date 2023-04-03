@@ -171,11 +171,11 @@
 
 (1) Pinterest Style Web cloning
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_pinterest_web.png" width="800">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_pinterest_web.gif" width="800">
 
 (2) Parallax Scrolling Web cloning
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_parallax_web.png" width="800">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_parallax_web.gif" width="800">
 
 ## 8일차 학습 내용
 - Single Page Template(GrayScale) cloning 
@@ -185,7 +185,7 @@
 
 (1) Single Page Template(GrayScale) cloning
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_singlepage_web.png" width="800">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day07_singlepage_web.gif" width="800">
 
 ## 9일차 학습 내용
 - SB Admin Web Template Cloning(to be continued)
