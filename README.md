@@ -107,7 +107,7 @@
 
 (1) grid layout - photo gallery
 
-<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day04_grid_gallery.png" width="500">
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day04_grid_gallery.png" width="800">
 
 (2) 
 
