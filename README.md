@@ -205,10 +205,11 @@
 (1) SB Admin Web Template Cloning
 
 ## 10일차 학습 내용
-- SB Admin Web Template Cloning(to be continued)
+- SB Admin Web Template Cloning
     - Bootstrap 5.3.0
     - jQuery 3.6.4
     - Chart.js
+    - [simple-datatables.js]https://github.com/fiduswriter/simple-datatables
 
 (1) SB Admin Web Template Cloning
 

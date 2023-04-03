@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Bootstrap Example - Header</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!--Bootstrap 용 CSS CDN-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <!--Bootstrap 용 Icon CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    #logo {
+      font-size: 30px;
+      margin-left: 15px;
+    }
+
+    ul i {
+      display: block;
+      margin-bottom: 0.5rem;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 24px;
+      width: 30px;
+      height: 30px;
+      size: 20px;
+    }
+
+    header>div {
+      padding: 5px;
+    }
+
+    #header-form>form {
+      margin-left: 15px;
+    }
+  </style>
+  <!-- font awesome용 스크립트 CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <header>
+    <div class="text-bg-dark px-1">
+      <div id="header-menu" class="container-fluid">
+        <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
+          <a id="logo" href="#" class="d-flex align-items-center my-2 my-l-0 me-auto text-white text-decoration-none">
+            <i class="bi bi-bootstrap-fill"></i>
+          </a>
+          <ul class="nav col-12 col-lg-auto my-2 my-md-0 justify-content-center">
+            <li>
+              <a href="#" class="nav-link text-white"><i class="bi bi-house-fill"></i>Home</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="bi bi-clipboard-data"></i>DashBoard</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="bi bi-basket-fill"></i>Orders</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="bi bi-columns-gap"></i>Products</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white"><i class="bi bi-people"></i>Customer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-1 py-3 border-bottom mb-3">
+      <div id="header-form" class="container-fluid d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto me-lg-auto">
+          <input type="search" class="form-control" placeholder="Search for" aria-label="search">
+        </form>
+        <div class="text-end">
+          <button class="btn btn-light text-dark">Login</button>
+          <button class="btn btn-primary">Sign-up</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!--Bootstrap 용 js script 태그는 반드시 body 내부에 존재해야 한다!-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

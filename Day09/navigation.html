@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="author" content="shmjo6417">
+    <meta name="description" content="이 페이지는 startBootstrap.com에서 제공하는 무료 템플릿을 커스터마이징하는 예제입니다. 웹 솔루션 관리자 화면으로 가장 많이 사용하는 웹 템플릿입니다.">
+    <title>SB Admin Web Template Cloning</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Bootstrap 용 CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!--Bootstrap 용 Icon CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Simple-Datatables 용 CSS CDN-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+    <!--외부 스타일시트-->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <!--웹 페이지 아이콘 변경-->
+    <link rel="icon" href="assets/ui.ico">
+    <!-- font awesome용 스크립트 CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+        </script>
+    <!--외부 자바스크립트-->
+    <script src='script/main.js'></script>
+</head>
+<body class="sidemenu-fixed">
+    <!--Navigation 영역-->
+    <nav class="top-nav navbar navbar-expand navbar-dark bg-dark">
+        <!--logo-->
+        <a class="navbar-brand ps-3" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                    <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                </svg>
+                <div class="d-md-inline-block p-1">ADMINISTRATOR</div>
+        </a>
+        <!--side toggle-->
+        <button id="sidebarToggle" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"><i class="fas fa-bars"></i></button>
+        <!--search-->
+        <form class="form-inline d-none d-md-inline-block ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search for" aria-describedby="btnNavbarSearch">
+                <button id="btnNavbarSearch" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!--Profile-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Activity Log</a></li>
+                    <li><hr class="dropdown-divider"></hr></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!--전체 영역-->
+    <div id="layout">
+        <!--Side Navigation 영역-->
+        <div id="sidenav">
+            <nav id="sideNavAccordion" class="sb-sidenav accordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <!--Core-->
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <!--Dashboard-->
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>Dashboard
+                        </a>
+                        <!--Interface-->
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <!--Layout-->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayout" aria-expanded="false" aria-controls="collapsedLayout">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Layout
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div id="collapseLayout" class="collapse" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="navigation.html">Static Navigation</a>
+                                <a class="nav-link" href="#">Light SideNav</a>
+                            </nav>
+                        </div>
+                        <!--Pages-->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Pages
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div id="collapsePages" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav id="sidenavAccordionPages" class="sb-sidenav-menu-nested nav accordion">
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Authentication
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div id="pagesCollapseAuth" class="collapse" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                        <a class="nav-link" href="register.html">Sign Up</a>
+                                        <a class="nav-link" href="password.html">Search Password</a>
+                                    </nav>
+                                </div>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="#pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div id="pagesCollapseError" class="collapse" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link collapsed" href="#">401 Page</a>
+                                        <a class="nav-link collapsed" href="#">404 Page</a>
+                                        <a class="nav-link collapsed" href="#">500 Page</a>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="sb-sidenav-menu-heading">Addons</div>
+                        <a class="nav-link" href="charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Charts
+                        </a>
+                        <a class="nav-link" href="tables.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Tables
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div>Logged in as : shmjo6417</div>
+                    Start Bootstrap
+                </div>
+            </nav>
+        </div>
+        <!--Main 영역-->
+        <div id="content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Static Navigation</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrum-item"><a href="index.html">DashBoard</a></li>
+                        <li class="breadcrum-item active">Static Navigation</li>
+                    </ol>
+                </div>
+            </main>
+            <footer class="py-4 mt-auto bg-light">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright & &copy; Your Website 2023</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--Bootstrap 용 js script 태그는 반드시 body 내부에 존재해야 한다!-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <!--Chart.js 용 CDN (구버전에서 신버전으로 전환하는 작업 필요)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha512-mf78KukU/a8rjr7aBRvCa2Vwg/q0tUjJhLtcK53PHEbFwCEqQ5durlzvVTgQgKpv+fyNMT6ZQT1Aq6tpNqf1mg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script/chart-area-demo.js"></script>
+    <script src="script/chart-bar-demo.js"></script>
+    <!--Simple-Datatable 용 JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script> -->
+    <script>
+        $(document).ready(function() {
+            new simpleDatatables.DataTable("#datatable", {
+                searchable: true,
+                fixedHeight: true,
+            });
+        });
+    </script>
+</body>
+</html>

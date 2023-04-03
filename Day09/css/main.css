@@ -7,7 +7,6 @@
 html, body {
     height: 100%;
 }
-
 #layout {
     display: flex;
 }
@@ -27,7 +26,7 @@ html, body {
 #layout #content {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     flex-grow: 1;
     justify-content: space-between;
     margin-left: -225px;
@@ -120,8 +119,8 @@ html, body {
     flex-wrap: nowrap;
 }
 .sb-sidenav-menu-heading {
-    padding: 1.75rem 1rem 0.75rem;
-    /* 3개 값 있으면 뭐가 적용되는 건데? */
+    padding: 1.75rem 1rem 0.75rem 1rem;
+    /* 3개 값 있으면 뭐가 적용되는 건데? => 중간에 1rem이 좌우, 1.75rem이 위, 0.75rem이 아래*/
     font-size: 0.9rem;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.7);
@@ -170,6 +169,126 @@ html, body {
     flex-shrink: 0;
 }
 
+/* datatable */
+.datatable-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.datatable-input  {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /* text-transform: uppercase; */
+    color: #343a40;
+    border: 1px solid #ced4da;
+    border-radius: 7px;
+    background-color: white;
+    background-clip: padding-box;
+    
+}
+.datatable-input:focus, .datatable-selector:focus {
+    color: #212529;
+    background-color: white;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 100, 253, 0.25);
+}
+.datatable-selector {
+    display: inline-block;
+    width: auto;
+    margin-right: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /* text-transform: uppercase; */
+    color: #343a40;
+    border: 1px solid #ced4da;
+    border-radius: 7px;
+    background-color: white;
+    background-clip: padding-box;
+}
+label {
+    display: inline-block;
+}
+/* .datatable-table {
+    border-collapse: collapse;
+    --bs-table-colr : var(--bs-body-color);
+    --bs-table-bg : transparent;
+    --bs-table-border-color : var(--bs-border-color);
+} */
+.datatable-container {
+    border-bottom: none !important;
+    overflow-x: auto;
+}
+thead th {
+    width: auto;
+    border-top: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+}
+.datatable-sorter {
+    padding-right: 1rem;
+}
+thead th:last-child {
+    border-right: 1px solid #ced4da;
+}
+
+tbody td {
+    border-bottom: 1px solid #ced4da;
+    border-left: 1px solid #ced4da; 
+}
+tbody td:last-child {
+    border-right: 1px solid #ced4da; 
+}
+tbody tr:hover {
+    background-color: #dee2e6;
+}
+.datatable-pagination ul {
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-y: 0.375rem;
+    --bs-pagination-font-size: 1rem;
+    --bs-pagination-color: var(--bs-link-color);
+    --bs-pagination-bg: #fff;
+    --bs-pagination-border-width: 1px;
+    --bs-pagination-border-color: #dee2e6;
+    --bs-pagination-border-radius: 0.375rem;
+    --bs-pagination-hover-color: var(--bs-link-hover-color);
+    --bs-pagination-hover-bg: #e9ecef;
+    --bs-pagination-hover-border-color: #dee2e6;
+    --bs-pagination-focus-color: var(--bs-link-hover-color);
+    --bs-pagination-focus-bg: #e9ecef;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #0d6efd;
+    --bs-pagination-active-border-color: #0d6efd;
+    --bs-pagination-disabled-color: #6c757d;
+    --bs-pagination-disabled-bg: #fff;
+    --bs-pagination-disabled-border-color: #dee2e6;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+.datatable-pagination li:not(:first-child) a {
+    margin-left: -1px;
+}
+.datatable-pagination li:first-child, .datatable-pagination li:first-child a {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.datatable-pagination li:last-child, .datatable-pagination li:last-child a {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.datatable-pagination a {
+    color : var(--bs-pagination-color);
+    display: block;
+    font-size: var(--bs-pagination-font-size);
+    text-decoration: none;
+    border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+}
   
   /* .input-group {
     position: relative;
@@ -178,3 +297,17 @@ html, body {
     align-items: stretch;
     width: 100%;
   } */
+
+/* 500 ERROR */
+#layout_error {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#content_error {
+   min-width: 0; 
+   flex-grow: 1;
+}
+#layout_error #footer_error {
+    min-width: 0;
+}
