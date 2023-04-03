@@ -311,3 +311,18 @@ tbody tr:hover {
 #layout_error #footer_error {
     min-width: 0;
 }
+/* login page */
+#layout-login {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#layout-login-content {
+    min-width: 0;
+    flex-grow: 1;
+    background-color:paleturquoise;
+}
+#layout-login-content .card {
+    margin-top: 60px;
+}
+
