@@ -18,11 +18,11 @@
 <!--![멀티미디어](https://github.com/shmjo0604/basic-html-2023/blob/main/image/day01.png?raw=true)-->
 (1) list, a 태그 활용
 
-<img src="https://raw.githubusercontent.com/shmjo0604/basic-html-2023/main/image/day01_%EA%B8%80%EC%9E%90%ED%83%9C%EA%B7%B8.png" width="700">
+<img src="https://raw.githubusercontent.com/shmjo0604/basic-html-2023/main/image/day01_%EA%B8%80%EC%9E%90%ED%83%9C%EA%B7%B8.png" width="800">
 
 (2) media 태그 활용
 
-<img src="https://raw.githubusercontent.com/shmjo0604/basic-html-2023/main/image/day01_%EB%A9%80%ED%8B%B0%EB%AF%B8%EB%94%94%EC%96%B4.png" width="300">
+<img src="https://raw.githubusercontent.com/shmjo0604/basic-html-2023/main/image/day01_%EB%A9%80%ED%8B%B0%EB%AF%B8%EB%94%94%EC%96%B4.png" width="800">
 
 ## 2일차 학습 내용
 - HTML5 학습
