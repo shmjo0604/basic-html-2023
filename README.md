@@ -195,9 +195,9 @@
         - Area Chart & Bar Chart 영역 구현(by Chart.js Libary)
         - Data Table 영역 데이터 추가(only Data)
     - 미해결 사항
-        - 사이드 메뉴 활성 상태 시, nav-brand 영역 글자가 사라지는 현상 수정
-        - 반응형 웹 구현(992px이하일 때, 메뉴 버튼 클릭 시, content 영역 어둡게 처리)
-        - Data Table 영역 구현
+        - (1) 사이드 메뉴 활성 상태 시, nav-brand 영역 글자가 사라지는 현상 수정
+        - (2) 반응형 웹 구현(992px이하일 때, 메뉴 버튼 클릭 시, content 영역 어둡게 처리)
+        - (3) Data Table 영역 구현
     - Bootstrap 5.3.0
     - jQuery 3.6.4
     - Chart.js
@@ -208,12 +208,19 @@
 
 ## 10일차 학습 내용
 - SB Admin Web Template Cloning
+    - 해결 사항 및 추가 사항
+        - (1) nav-brand 영역의 z-index 값을 사이드 메뉴 영역보다 높게 설정하는 것으로 해결
+        - (2) 기본 설정으로 메뉴 버튼 클릭 시, content 영역을 어둡게 처리하는 소스 코드 추가
+                & 992px 이상일 때, media query 추가 -> 어둡게 처리하는 기능을 삭제
+        - (3)
     - Bootstrap 5.3.0
     - jQuery 3.6.4
     - Chart.js
     - [simple-datatables.js](https://github.com/fiduswriter/simple-datatables)
 
 (1) SB Admin Web Template Cloning
+
+
 
 ## 11일차 학습 내용
 

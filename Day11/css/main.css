@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NanumGothic', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+#container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* header 영역 */
+header {
+    background-color: skyblue;
+    height: 120px;
+}
+#logo {
+    float: left;
+    width: 25%;
+    height: 120px;
+    line-height: 115px; /* line-height가 뭘까요? */
+    padding-left: 30px;
+}
+#logo h1 {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 -1px 0 #222222;
+}
+nav {
+    float: right;
+    width: 75%;
+    height: 120px;
+    padding-top: 25px;
+}
+#top-menu {
+    list-style: none;
+}
+#top-menu > li {
+    float: left;
+    position: relative;
+    display: list-item;
+}
+#top-menu > li > a {
+    display: block;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 20px 60px;
+}
+#top-menu > li > a:hover {
+    color: #222222;
+}
+#top-menu > li > a > span {
+    margin-left: 15px;
+}
+#top-menu > li > ul {
+    display: none;
+    position: absolute;
+    width: 150px;
+    background: rgba(255,255,255,0.3);
+    margin: 0;
+    left: 50px;
+}
+#top-menu > li:hover > ul {
+    display: block;
+    z-index: 20;
+}
+#top-menu > li > ul > li {
+    list-style: none;
+    padding: 10px 10px 10px 30px;
+}
+#top-menu > li > ul > li > a {
+    font-size: 15px;
+    padding: 10px 0px;
+    color: black;
+}
+#top-menu > li > ul > li > a:hover {
+    color: blue;
+    /* background: rgba(255,255,255,0.2); */
+}
+
+/* image slide 영역 */
+#image-slide {
+    clear: both;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#slide {
+    position: absolute;
+}
+#slide > img {
+    width: 100%;
+    float: left;
+}
+button {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border: none;
+    padding: 20px;
+    background: transparent;
+    color: black;
+    font-weight: 800;
+    font-size: 24px;
+    opacity: 0.5;
+}
+button:hover {
+    background-color: #222222;
+    color: white;
+    opacity: 0.6;
+    cursor: pointer;
+}
+button:focus {
+    outline: 0;
+}
+#prev {
+    left: 0;
+}
+#next {
+    right: 0;
+}
+
+/* content 영역 */
+#content {
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+}
+#left-side {
+    clear: both;
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-top: 15px;
+    /* background-color: blanchedalmond; */
+}
+#left-side input[type="radio"] {
+    display: none;
+}
+#left-side label {
+    display: inline-block;
+    margin: 0 0;
+    padding: 15px 25px;
+    font-weight: 700;
+    text-align: center;
+    color: #aaaaaa;
+    border: 1px solid transparent;
+}
+#left-side label:hover {
+    color: #222222;
+    cursor: pointer;
+}
+#left-side input:checked + label {
+    /* 여기서 '+' 의 용도는? */
+    color: #b00b00;
+    border: 1px solid #dddddd;
+    background-color: #eeeeee;
+}
+.tab-content {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #dddddd;
+}
+/* .tab-content > ul li {
+    list-style: none;
+} */
+/* .tab-content h2 {
+    display: none;
+} */
+#notice ul {
+    list-style: circle;
+    margin-left: 25px;
+}
+#notice ul li {
+    font-size: 16px;
+    line-height: 2.5;
+}
+#gallery ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+#tab-1:checked ~ #notice, #tab-2:checked ~ #gallery {
+    display: block;
+}
+#right-side {
+    float: right;
+    width: 50%;
+    height: 100%;
+    margin-top: 35px;
+    /* background-color: coral; */
+}
+#right-sdie > ul {
+    padding: 0;
+    overflow: hidden;
+}
+#right-side > ul > li {
+    list-style: none;
+    float: left; /* 가로 배치 */
+    width: 33%;
+    text-align: center;
+    margin: 10px 0px;
+}
+#right-side > ul > li span {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    border: 1px solid #dddddd;
+    line-height: 150px;
+}
+#quick-1 {
+    background-image: url("../assets/icon-1.jpg");
+}
+#quick-2 {
+    background-image: url("../assets/icon-2.jpg");
+}
+#quick-3 {
+    background-image: url("../assets/icon-3.jpg");
+}
+#right-side > ul > li p {
+    margin-top: 20px;
+    font-weight: 700;
+    color: darkslategrey;
+}
+
+/* footer 영역 */
+footer {
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid #222222;
+    /* background-color: gray; */
+}
+#footer-menu {
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+#footer-menu ul {
+    margin-top: 15px;
+}
+#footer-menu ul li {
+    list-style: none;
+    float: left; /* 가로 배치 */
+    padding: 5px 20px;
+    border-right: 1px solid #dddddd;
+}
+#footer-menu ul li:last-child {
+    border-right: none;
+}
+#footer-menu ul li a {
+    color: #222222;
+}
+#footer-sns {
+    position: absolute;
+    right: 0;
+}
+#footer-sns ul li {
+    padding: 0px 5px;
+    border: none;
+}
+#company {
+    clear: both;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#company p {
+    font-size: 14px;
+    color: #aaaaaa;
+}
