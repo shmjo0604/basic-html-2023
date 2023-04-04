@@ -20,10 +20,10 @@ $(document).ready(function () {
 
     /* 메뉴 버튼 클릭에 따른 메뉴 active class 추가 및 제거 => 스크롤이 있으면 필요없음, 동시에 존재하면 충돌이 일어남! */
 
-    // $('.nav-link').click(function () {
-    //     $('.nav-link').removeClass('active');
-    //     $(this).addClass('active');
-    // });
+    $('.nav-link').click(function () {
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+    });
 
     /* 스크롤 이동에 따른 메뉴 active class 추가 및 제거 */
 

@@ -220,7 +220,7 @@
 
 (1) SB Admin Web Template Cloning
 
-
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day10_SB_Admin.gif" width="800">
 
 ## 11일차 학습 내용
 
