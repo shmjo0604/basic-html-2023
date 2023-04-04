@@ -63,7 +63,7 @@
 - CSS3 속성
     - Display 속성 -> none, block, inline 등
     - Background 속성 -> image, size, repeat 등
-    - Font 속성 -> size, famil 등
+    - Font 속성 -> size, family 등
     - Position 속성 -> absolute, ★ relative, left, top, z-index
     - Float 속성 -> right, left(★ 수평 정렬 기능)
 - CSS 레이아웃
@@ -189,6 +189,9 @@
 
 ## 9일차 학습 내용
 - SB Admin Web Template Cloning(to be continued)
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+    - Chart.js
     - 현재 진행 상태
         - 기본적인 레이아웃(+반응형) 및 디자인 완료(by Bootstrap & CSS)
         - 사이드 메뉴 버튼 클릭에 따른 사이드 메뉴 활성 및 비활성 상태 전환 완료(by CSS & Javascript)
@@ -198,9 +201,7 @@
         - (1) 사이드 메뉴 활성 상태 시, nav-brand 영역 글자가 사라지는 현상 수정
         - (2) 반응형 웹 구현(992px이하일 때, 메뉴 버튼 클릭 시, content 영역 어둡게 처리)
         - (3) Data Table 영역 구현
-    - Bootstrap 5.3.0
-    - jQuery 3.6.4
-    - Chart.js
+    
 
 (1) SB Admin Web Template Cloning
 
@@ -208,22 +209,37 @@
 
 ## 10일차 학습 내용
 - SB Admin Web Template Cloning
-    - 해결 사항 및 추가 사항
-        - (1) nav-brand 영역의 z-index 값을 사이드 메뉴 영역보다 높게 설정하는 것으로 해결
-        - (2) 기본 설정으로 메뉴 버튼 클릭 시, content 영역을 어둡게 처리하는 소스 코드 추가
-                & 992px 이상일 때, media query 추가 -> 어둡게 처리하는 기능을 삭제
-        - (3)
     - Bootstrap 5.3.0
     - jQuery 3.6.4
     - Chart.js
     - [simple-datatables.js](https://github.com/fiduswriter/simple-datatables)
+    - 해결 사항 및 추가 사항
+        - (1) nav-brand 영역의 z-index 값을 사이드 메뉴 영역보다 높게 설정하는 것으로 해결
+        - (2) 기본 설정으로 메뉴 버튼 클릭 시, content 영역을 어둡게 처리하는 소스 코드 추가
+                & 992px 이상일 때, media query 추가 -> 어둡게 처리하는 기능을 삭제
+        - (3) simple-datatables.js library 이용
+    
 
 (1) SB Admin Web Template Cloning
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day10_SB_Admin.gif" width="800">
 
 ## 11일차 학습 내용
+- 《Do it! HTML5+CSS3 웹 표준의 정석》프로젝트 실습
+    - HTML5
+    - CSS3
+    - Javascript(& jQuery 3.6.4)
+    - 미해결 사항
+        - (1) 이미지 슬라이드 -> javascript DOM으로는 기능을 구현했으나, 동일한 기능을 jQuery로 구현하는 데 실패
+- HTML(교재 실습 프로젝트 & SB-Admin Template) -> JSP(MVC Model 2 적용)
+    - JSP & Servlet
+    - Apache Tomcat v10.1
+    - 기본 HTML, CSS, Javascript 파일을 기반으로 JSP 생성(View) 및 Servlet(Controller) 연결
+    - 웹 서버 주소를 통해 JSP 파일 접근 및 이동
+    
 
 ## 12일차 학습 내용
-
+- [Freelancer Template](https://startbootstrap.com/theme/freelancer) Cloning
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
 

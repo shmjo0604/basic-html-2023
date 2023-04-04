@@ -29,20 +29,199 @@
 
 <body>
     <!--Navigation 영역-->
-    <nav>
-        <div>
-            <a href=""></a>
-            <button></button>
+    <nav class="navbar navbar-expand">
+        <div class="container">
+            <a class="navbar-brand" href="#">START BOOTSTRAP</a>
+            <button class="navbar-toggler bg-primary text-white" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu<i class="fas fa-bars"></i>
+            </button>
+            <div id="navbarResponsive" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a href="#"></a>Portfolio</li>
+                    <li class="nav-item mx-0 mx-lg-1"><a href="#"></a>About</li>
+                    <li class="nav-item mx-0 mx-lg-1"><a href="#"></a>Contact</li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!--Header 영역-->
+    <header id="header" class="bg-primary text-white text-center">
+        <div>
+            <!--User Image-->
+            <img>
+            <!--Heading-->
+            <h1>Freelancer</h1>
+            <!--divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!--Sub-Heading-->
+            <p>Graphic Artist - Web Designer - Illustrator</p>
+        </div>
+    </header>
 
     <!--Portfolio 영역-->
+    <section id="portfolio">
+        <div class="container">
+            <!--Heading-->
+            <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <!--divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!--Contnet-->
+            <div class="row justify-content-center">
+                <!--item 1-->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-icon">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <!--item 2-->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-icon">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <!--item 3-->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-icon">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <!--item 4-->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-icon">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <!--item 5-->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-icon">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <!--item 6-->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                        <div class="portfolio-item-caption">
+                            <div class="portfolio-item-caption-icon">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--About 영역-->
+    <section id="about" class="bg-primary text-white mb-0">
+        <div class="container">
+            <!--Heading-->
+            <h2 class="text-center text-white">About</h2>
+            <!--divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!--Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!
+                </div>
+            </div>
+            <!--Button-->
+            <div class="text-center mt-4">
+                <a class="btn btn-outline-light" href="#">
+                    <i class="fas fa-download me-2"></i>
+                    Free Download!
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!--Contact 영역-->
+    <section id="contact">
+        <div class="container">
+            <!--Heading-->
+            <h2 class="text-center text-secondary mb-0">Contact Me</h2>
+            <!--divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!--Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contact-form">
+                        <!--Input(Name)-->
+                        <div class="form-floating mb-2">
+                            <input id="name" class="form-control" type="text" placeholder="Enter your name" data-bs-validations="required"/>
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required</div>
+                        </div>
+                        <!--Input(Email)-->
+                        <div class="form-floating mb-2">
+                            <input id="email" class="form-control" type="email" placeholder="Enter your email" data-bs-validations="required"/>
+                            <label for="email">Email Address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required</div>
+                        </div>
+                        <!--Input(Phone)-->
+                        <div class="form-floating mb-2">
+                            <input id="phone" class="form-control" type="tel" placeholder="Enter your phone" data-bs-validations="required"/>
+                            <label for="phone">Phone Number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required</div>
+                        </div>
+                        <!--Input(Message)-->
+                        <div class="form-floating mb-2">
+                            <textarea id="message" class="form-control" type="text" style="height:10rem" placeholder="Enter your message" data-bs-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required</div>
+                        </div>
+                        <!--Button-->
+                        <button id="submit-button" class="btn btn-primary disabled" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--Footer 영역-->
 
