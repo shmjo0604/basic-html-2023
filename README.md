@@ -242,4 +242,7 @@
 - [Freelancer Template](https://startbootstrap.com/theme/freelancer) Cloning
     - Bootstrap 5.3.0
     - jQuery 3.6.4
+    - 현재 진행 상태
+        - 기본적인 Bootstrap 레이아웃 완료
+        - 포트폴리오 영역(Modal 미구현) & 아이콘 위치 조정 실패
 
