@@ -14,7 +14,7 @@
     <!--외부 스타일시트-->
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <!--웹 페이지 아이콘 변경-->
-    <link rel="icon" href="assets/ui.ico">
+    <link rel="icon" href="assets/favicon.ico">
     <!-- font awesome용 스크립트 CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
         integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
@@ -29,7 +29,7 @@
 
 <body>
     <!--Navigation 영역-->
-    <nav class="navbar navbar-expand">
+    <nav id="navigation" class="navbar navbar-expand-lg text-uppercase">
         <div class="container">
             <a class="navbar-brand" href="#">START BOOTSTRAP</a>
             <button class="navbar-toggler bg-primary text-white" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,23 +37,23 @@
             </button>
             <div id="navbarResponsive" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a href="#"></a>Portfolio</li>
-                    <li class="nav-item mx-0 mx-lg-1"><a href="#"></a>About</li>
-                    <li class="nav-item mx-0 mx-lg-1"><a href="#"></a>Contact</li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link px-3 py-3 rounded" href="#">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link px-3 py-3 rounded" href="#">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link px-3 py-3 rounded" href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!--Header 영역-->
-    <header id="header" class="bg-primary text-white text-center">
-        <div>
+    <header id="header" class="text-white text-center">
+        <div class="container d-flex flex-column align-items-center">
             <!--User Image-->
             <img>
             <!--Heading-->
-            <h1>Freelancer</h1>
+            <h1 class="text-uppercase">Freelancer</h1>
             <!--divider-->
-            <div class="divider-custom divider-light">
+            <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
@@ -64,12 +64,12 @@
     </header>
 
     <!--Portfolio 영역-->
-    <section id="portfolio">
+    <section id="portfolio" class="page-section">
         <div class="container">
             <!--Heading-->
-            <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
             <!--divider-->
-            <div class="divider-custom divider-light">
+            <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
@@ -79,66 +79,66 @@
                 <!--item 1-->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-icon">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-icon text-center">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
-                            <img src="">
+                            <img class="img-fluid" src="assets/cabin.png">
                         </div>
                     </div>
                 </div>
                 <!--item 2-->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-icon">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-icon text-center">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
-                            <img src="">
+                            <img class="img-fluid" src="assets/cake.png">
                         </div>
                     </div>
                 </div>
                 <!--item 3-->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-icon">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-icon text-center text-white">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
-                            <img src="">
+                            <img class="img-fluid" src="assets/circus.png">
                         </div>
                     </div>
                 </div>
                 <!--item 4-->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-icon">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-icon text-center text-white">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
-                            <img src="">
+                            <img class="img-fluid"src="assets/game.png">
                         </div>
                     </div>
                 </div>
                 <!--item 5-->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-icon">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-icon text-center text-white">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
-                            <img src="">
+                            <img class="img-fluid" src="assets/safe.png">
                         </div>
                     </div>
                 </div>
                 <!--item 6-->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                        <div class="portfolio-item-caption">
-                            <div class="portfolio-item-caption-icon">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-icon text-center text-white">
                                 <i class="fas fa-plus fa-3x"></i>
                             </div>
-                            <img src="">
+                            <img class="img-fluid" src="assets/submarine.png">
                         </div>
                     </div>
                 </div>
@@ -147,12 +147,12 @@
     </section>
 
     <!--About 영역-->
-    <section id="about" class="bg-primary text-white mb-0">
+    <section id="about" class="page-section text-white mb-0">
         <div class="container">
             <!--Heading-->
-            <h2 class="text-center text-white">About</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
             <!--divider-->
-            <div class="divider-custom divider-light">
+            <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
@@ -168,7 +168,7 @@
             </div>
             <!--Button-->
             <div class="text-center mt-4">
-                <a class="btn btn-outline-light" href="#">
+                <a id="download-button" class="btn btn-outline-light" href="#">
                     <i class="fas fa-download me-2"></i>
                     Free Download!
                 </a>
@@ -177,12 +177,12 @@
     </section>
 
     <!--Contact 영역-->
-    <section id="contact">
+    <section id="contact" class="page-section">
         <div class="container">
             <!--Heading-->
-            <h2 class="text-center text-secondary mb-0">Contact Me</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact me</h2>
             <!--divider-->
-            <div class="divider-custom divider-light">
+            <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
@@ -192,25 +192,25 @@
                 <div class="col-lg-8">
                     <form id="contact-form">
                         <!--Input(Name)-->
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-3">
                             <input id="name" class="form-control" type="text" placeholder="Enter your name" data-bs-validations="required"/>
                             <label for="name">Full name</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required</div>
                         </div>
                         <!--Input(Email)-->
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-3">
                             <input id="email" class="form-control" type="email" placeholder="Enter your email" data-bs-validations="required"/>
                             <label for="email">Email Address</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required</div>
                         </div>
                         <!--Input(Phone)-->
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-3">
                             <input id="phone" class="form-control" type="tel" placeholder="Enter your phone" data-bs-validations="required"/>
                             <label for="phone">Phone Number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required</div>
                         </div>
                         <!--Input(Message)-->
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-3">
                             <textarea id="message" class="form-control" type="text" style="height:10rem" placeholder="Enter your message" data-bs-validations="required"></textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required</div>
@@ -224,8 +224,42 @@
     </section>
 
     <!--Footer 영역-->
+    <footer class="footer text-center text-white">
+        <div class="container">
+            <div class="row">
+                <!--Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4 text-uppercase">Location</h4>
+                    <p>
+                        2215 John Daniel Drive
+                        <br/>
+                        Clark, MO 65243
+                    </p>
+                </div>
+                <!--Social Icon-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h3 class="text-uppercase">Around the Web</h3>
+                    <a class="btn btn-social btn-outline-dark" href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-social btn-outline-dark" href="#"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-social btn-outline-dark" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-social btn-outline-dark" href="#"><i class="fab fa-fw fa-dribbble"></i></a>
+                </div>
+                <!--About Text-->
+                <div class="col-lg-4">
+                    <h3 class="text-uppercase">About Freelancer</h3>
+                    <p class="mb-0">
+                        Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!--Copyright 영역-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="small">Copyright &copy; Your Website 2023</div>
+    </div>
 
     <!--Bootstrap 용 js script 태그는 반드시 body 내부에 존재해야 한다!-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
