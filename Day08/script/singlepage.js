@@ -48,7 +48,7 @@ $(document).ready(function () {
         about = $('#about').offset().top-250;
         portfolio = $('#portfolio').offset().top-75;
         signup = $("#signup").offset().top-100;
-
+    
         var scroll = $(window).scrollTop();
         console.log(scroll);
         if (scroll < about) {

@@ -258,10 +258,33 @@
     - jQuery 3.6.4
     - 현재 진행 상태
         - 기본적인 Bootstrap 레이아웃 완료
-        - 포트폴리오 영역(Modal 미구현) & 아이콘 위치 조정 실패
+    - 미해결 사항
+        - (1) heading & divdier-custom 영역마다 다르게 색 변환 미실시(.divider-cutosm에 적용 안 됨)
+        - (2) + 아이콘 위치 조정 실패(position absolute 적용 안 됨)
+        - (3) 포트폴리오 영역(Modal 미구현)
+        - (4) 스크롤 반응에 따른 navigation 영역 메뉴 active 상태 조정(by jQuery)
+        - (5) contact 영역 form 유효성 검사
         
 - 실습 구현 화면
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day12_freelancer_web.gif" width="800">
 
 
+# 13일차 (오전) 학습 내용
+- Front-End Test
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+- [Freelancer Template](https://startbootstrap.com/theme/freelancer) Cloning
+    - Bootstrap 5.3.0
+    - jQuery 3.6.4
+    - 해결 및 추가 사항
+        - (1) .divdier-custom 하위 클래스 -> line과 icon에 각각 background-color와 color를 white로 설정
+        - (2) img 태그 위치 오류 -> 수정 후, position absolute 정상 적용
+        - (3) Modal 구현
+        - (4) 스크롤 반응에 따른 메뉴 active 기능 구현(ref. 8일차 - grayscale)
+    - 미해결 사항
+        - (1) contact 영역 form 유효성 검사
+
+- 실습 구현 화면
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day13_freelancer_web.gif" width="800">

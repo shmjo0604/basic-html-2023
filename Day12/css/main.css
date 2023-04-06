@@ -1,13 +1,21 @@
+* {
+    font-family: 'NanumGothic', sans-serif;
+}
 html {
     height: 100vh;
 }
 .page-section {
     padding: 5rem 0;
 }
+.page-section-heading {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+}
 @media screen and (min-width: 992px) {
-    .page-section .page-section-heading {
+    .page-section-heading {
         font-size: 3rem;
-        line-height: 2.5rem;
+        line-height: 2rem;
         font-weight: 900;
     }
 }
@@ -73,6 +81,8 @@ img, svg {
 }
 #navigation .navbar-toggler {
     padding: 0.8rem;
+    font-size: 85%;
+    background-color: #1abc9c;
 }
 @media screen and (min-width:992px) {
     #navigation {
@@ -107,6 +117,12 @@ img, svg {
 #header p {
     font-size: 1.5rem;
 }
+#header .divider-custom .divider-custom-line {
+    background-color: white;
+}
+#header .divider-custom .divider-custom-icon {
+    color: white;
+}
 @media screen and (min-width:992px) {
     #header {
         padding-top: calc(4rem + 150px);
@@ -121,6 +137,9 @@ img, svg {
     }
 }
 /* portfolio */
+#portfolio h2 {
+    color: #2c3e50 !important;
+}
 #portfolio .portfolio-item {
     cursor: pointer;
     position: relative;
@@ -129,13 +148,13 @@ img, svg {
     overflow: hidden;
     border-radius: 0.5rem;
 }
-/* #portfolio .portfolio-item .portfolio-item-caption {
+#portfolio .portfolio-item .portfolio-item-caption {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     background-color: #1abc9c;
-} */
+}
 #portfolio .portfolio-item .portfolio-item-caption:hover {
     opacity: 1;
 }
@@ -143,15 +162,32 @@ img, svg {
 #about {
     background-color: #1abc9c;
 }
+#about .lead {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#about .divider-custom .divider-custom-line {
+    background-color: white;
+}
+#about .divider-custom .divider-custom-icon {
+    color: white;
+}
 
 /* contact */
+#contact h2 {
+    color: #2c3e50 !important;
+}
 .form-floating input, .form-floating textarea {
-    font-size: 3rem;
+    font-size: 1.25rem;
     border-left: 0;
     border-right: 0;
     border-top: 0;
     border-radius: 0;
     border-width: 1px;
+}
+.form-floating .form-control {
+    height: 5.5rem;
+    line-height: 1.25;
 }
 .form-floating input:focus, .form-floating textarea:focus {
     box-shadow: none;
@@ -170,6 +206,9 @@ img, svg {
 }
 .copyright {
     background-color: #1a252f;
+}
+#footer-link {
+    color: #1abc9c;
 }
 
 
