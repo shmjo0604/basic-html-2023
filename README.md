@@ -183,6 +183,8 @@
     - Bootstrap 5.3.0
     - jQuery 3.6.4
 
+- 실습 구현 화면
+
 (1) Single Page Template(GrayScale) cloning
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day08_grayscale_web.gif" width="800">
@@ -201,7 +203,8 @@
         - (1) 사이드 메뉴 활성 상태 시, nav-brand 영역 글자가 사라지는 현상 수정
         - (2) 반응형 웹 구현(992px이하일 때, 메뉴 버튼 클릭 시, content 영역 어둡게 처리)
         - (3) Data Table 영역 구현
-    
+
+- 실습 구현 화면    
 
 (1) SB Admin Web Template Cloning
 
@@ -218,11 +221,18 @@
         - (2) 기본 설정으로 메뉴 버튼 클릭 시, content 영역을 어둡게 처리하는 소스 코드 추가
                 & 992px 이상일 때, media query 추가 -> 어둡게 처리하는 기능을 삭제
         - (3) simple-datatables.js library 이용
-    
+- Bootstrap Example Header 1개 선택 후 구현 실습
+    - Bootstrap 5.3.0
+
+- 실습 구현 화면
 
 (1) SB Admin Web Template Cloning
 
 <img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day10_SB_Admin.gif" width="800">
+
+(2) Bootstrap Example Header
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day10_bootstrap_example_header.png" width="800">
 
 ## 11일차 학습 내용
 - 《Do it! HTML5+CSS3 웹 표준의 정석》프로젝트 실습
@@ -231,12 +241,16 @@
     - Javascript(& jQuery 3.6.4)
     - 미해결 사항
         - (1) 이미지 슬라이드 -> javascript DOM으로는 기능을 구현했으나, 동일한 기능을 jQuery로 구현하는 데 실패
+
 - HTML(교재 실습 프로젝트 & SB-Admin Template) -> JSP(MVC Model 2 적용)
     - JSP & Servlet
     - Apache Tomcat v10.1
     - 기본 HTML, CSS, Javascript 파일을 기반으로 JSP 생성(View) 및 Servlet(Controller) 연결
     - 웹 서버 주소를 통해 JSP 파일 접근 및 이동
-    
+
+- 실습 구현 화면
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day11_do_it_project.gif" width="800">
 
 ## 12일차 학습 내용
 - [Freelancer Template](https://startbootstrap.com/theme/freelancer) Cloning
@@ -245,4 +259,9 @@
     - 현재 진행 상태
         - 기본적인 Bootstrap 레이아웃 완료
         - 포트폴리오 영역(Modal 미구현) & 아이콘 위치 조정 실패
+        
+- 실습 구현 화면
+
+<img src="https://github.com/shmjo0604/basic-html-2023/blob/main/image/day12_freelancer_web.gif" width="800">
+
 
