@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>게시물 조회</title>
+    <title>물품 등록</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!--Bootstrap 용 CSS CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,21 +17,33 @@
             <div class="row justify-content-center">
                 <div class="col-8 my-5 border border-dark">
                     <div class="d-flex justify-content-center align-items-center">
-                        <h2 class="mt-3">게시물 확인</h2>
-                        <p class="ms-auto mt-5">조회수</p>
+                        <h2 class="mt-3">물품 등록</h2>
                     </div>
                     <hr class="divider">
-                    <div class="mb-3">
-                        <label class="form-label">제목</label>
+                    <div class="mb-3 w-50">
+                        <label class="form-label">물품명</label>
                         <input type="text" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">내용</label>
+                        <label class="form-label">물품 내용</label>
                         <textarea class="form-control" row="10"></textarea>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">작성자</label>
-                        <input type="text" class="form-control">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="form-label">가격</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label class="form-label">수량</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label">물품이미지</label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="itemimage">
+                            <label class="input-group-text bg-success" for="itemimage">Upload</label>
+                        </div>
                     </div>
                     <div>
                     </div>
